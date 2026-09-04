@@ -16,15 +16,18 @@ export function SiteFooter() {
         <div>
           <h2 className="text-2xl">Ennotraan</h2>
           <p className="mt-3 max-w-md leading-relaxed opacity-75">
-            A free, screen-free way to help families build good habits, one honest day at a time.
+            A 100% free, screen-free framework helping families build lifelong habits, one honest
+            day at a time.
           </p>
+
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm opacity-80">
             <Link to="/how-it-works" className="underline-offset-4 hover:underline">
               How it works
             </Link>
             <Link to="/for-everyone" className="underline-offset-4 hover:underline">
-              For everyone
+              Not just for children
             </Link>
+
             <Link to="/our-promise" className="underline-offset-4 hover:underline">
               Our promise
             </Link>

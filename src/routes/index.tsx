@@ -4,22 +4,22 @@ import { useRef } from "react";
 import lamp from "@/assets/lamp.jpg";
 import { CtaBand } from "@/components/cta-band";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
-import { problems, steps } from "@/content/site";
+import { beliefs, problemsAdults, problemsParents, steps } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ennotraan — small habits, big achievements" },
+      { title: "Ennotraan — one small habit a day, screen-free and free" },
       {
         name: "description",
         content:
-          "A free, screen-free board and private parent app that helps families build good daily habits, one honest day at a time.",
+          "A 100% free, screen-free way to build good habits. A physical board plus a private parent app for disciplined children, empowered parents, and self-driven adults.",
       },
-      { property: "og:title", content: "Ennotraan — small habits, big achievements" },
+      { property: "og:title", content: "Ennotraan — one small habit a day, screen-free and free" },
       {
         property: "og:description",
         content:
-          "A free, screen-free way for families to build good daily habits. No data on children, no leaderboards, no cost.",
+          "Build lifelong daily habits for every generation at home, without placing a screen in your child's hands. Offered completely free.",
       },
     ],
   }),
@@ -47,7 +47,7 @@ function Home() {
             transition={{ duration: 0.6 }}
             className="inline-block rounded-full border border-leaf/30 bg-leaf/10 px-4 py-1.5 text-sm text-leaf"
           >
-            Free, screen-free habits for the whole family
+            A 100% free, screen-free way to build good habits and a family digital detox
           </motion.p>
           <h1 className="mt-6 text-4xl leading-[1.12] sm:text-5xl md:text-[3.5rem]">
             {"One small habit a day.".split(" ").map((word, i) => (
@@ -67,7 +67,7 @@ function Home() {
               transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
               className="block text-shimmer"
             >
-              That is all it takes to raise a confident child.
+              Disciplined children, empowered parents, self-driven adults.
             </motion.span>
           </h1>
           <motion.p
@@ -76,9 +76,12 @@ function Home() {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground"
           >
-            Ennotraan is a simple board and a private app that helps your family build good daily
-            habits, without putting a screen in your child's hands. It is offered free, as a small
-            contribution to healthier homes, not as a business selling to children.
+            Ennotraan pairs a simple, physical board with a private app to build lifelong daily
+            habits for every generation at home, without placing a screen in your child's hands. It
+            gives parents a scientific tool to ease the hardship of everyday parenting, and gives
+            adults a structured system to become true masters of their own lives. Offered completely
+            free as our humble contribution toward healthier, bonded homes, never as a business
+            selling to children.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -124,24 +127,62 @@ function Home() {
       {/* Problem */}
       <section className="mx-auto max-w-6xl px-6 py-16">
         <Reveal>
-          <h2 className="max-w-2xl text-3xl sm:text-4xl">
-            Every home is fighting the same quiet battle
+          <h2 className="max-w-3xl text-3xl sm:text-4xl">
+            Every home is fighting a quiet battle, not from a lack of love or effort, but a lack of
+            the right tool.
           </h2>
+        </Reveal>
+
+        <Reveal className="mt-12">
+          <h3 className="text-sm uppercase tracking-[0.18em] text-leaf">
+            For parents and children
+          </h3>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Homework, sleep, screen time, chores. Parents repeat the same battle every single day,
-            and it wears everyone out. What is missing is not willpower. It is a simple, honest way
-            to notice effort and make it feel worthwhile.
+            Parents today give everything they have to nurture, guide, and protect their children,
+            enduring the heavy penance of endless daily coordination. Yet the same exhausting
+            battles over screen time, sleep, and routines repeat every single day. The issue is not
+            a lack of parental willpower or child potential; it is that parents are forced to fight
+            modern digital distractions without a scientific, screen-free tool designed to support
+            them. Worst of all, conventional solutions offer more screen time and gadgets to solve a
+            screen-time problem.
           </p>
         </Reveal>
-        <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-3">
-          {problems.map((item) => (
+        <StaggerGroup className="mt-10 grid gap-6 md:grid-cols-3">
+          {problemsParents.map((item) => (
             <StaggerItem key={item.title}>
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="h-full rounded-2xl border border-border bg-card/70 p-7 backdrop-blur-sm"
               >
-                <h3 className="text-xl">{item.title}</h3>
+                <h4 className="text-xl">{item.title}</h4>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
+              </motion.div>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+
+        <Reveal className="mt-16">
+          <h3 className="text-sm uppercase tracking-[0.18em] text-leaf">
+            For adults and self-discipline
+          </h3>
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            For adults striving for personal growth, fitness, and professional mastery, the struggle
+            is equally real. We start every week with strong intentions, only to be pulled away by
+            constant notifications, fragmented focus, and superficial apps that treat
+            self-improvement like a game rather than a life practice. Without a tangible anchor to
+            track daily consistency away from screens, personal goals slip away.
+          </p>
+        </Reveal>
+        <StaggerGroup className="mt-10 grid gap-6 md:grid-cols-3">
+          {problemsAdults.map((item) => (
+            <StaggerItem key={item.title}>
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="h-full rounded-2xl border border-border bg-card/70 p-7 backdrop-blur-sm"
+              >
+                <h4 className="text-xl">{item.title}</h4>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
               </motion.div>
             </StaggerItem>
@@ -160,21 +201,40 @@ function Home() {
             &ldquo;
           </span>
           <blockquote className="mt-4 text-2xl leading-relaxed sm:text-3xl">
-            Raising a child well is not just something that happens. It is a daily practice of
-            caring, one honest day at a time.
+            What it means to raise a child well is not something that just happens. It is a daily
+            practice of caring, one honest day at a time.
           </blockquote>
           <p className="mt-8 text-sm italic opacity-70">
-            Based on Thirukkural 70, an old Tamil verse about parenting as a daily practice, not a
-            one-time event.
+            Inspired by Thirukkural 70, a timeless Tamil insight: raising a virtuous child is not a
+            one-time achievement, but a daily practice of intentional care.
           </p>
         </Reveal>
       </section>
 
-      {/* Three steps preview */}
+      {/* Beliefs */}
       <section className="mx-auto max-w-6xl px-6 py-24">
         <Reveal>
           <h2 className="max-w-2xl text-3xl sm:text-4xl">
-            Three simple steps. Nothing new for your child to learn.
+            Empowering parents with trust, flexibility, and age-appropriate science.
+          </h2>
+        </Reveal>
+        <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {beliefs.map((item) => (
+            <StaggerItem key={item.title} className="h-full">
+              <div className="h-full rounded-3xl border border-border bg-card/70 p-7 backdrop-blur-sm">
+                <h3 className="text-xl">{item.title}</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+      </section>
+
+      {/* Three steps preview */}
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <Reveal>
+          <h2 className="max-w-3xl text-3xl sm:text-4xl">
+            Three simple steps to meliorate parental penance and build lifelong child habits.
           </h2>
         </Reveal>
         <StaggerGroup className="mt-14 grid gap-10 md:grid-cols-3">

@@ -5,7 +5,7 @@ import logo from "@/assets/ennotraan-logo.png.asset.json";
 
 const nav = [
   { to: "/how-it-works", label: "How it works" },
-  { to: "/for-everyone", label: "For everyone" },
+  { to: "/for-everyone", label: "Not just for children" },
   { to: "/our-promise", label: "Our promise" },
   { to: "/about", label: "Why we built it" },
 ] as const;
