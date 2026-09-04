@@ -25,8 +25,9 @@ export function SiteFooter() {
               How it works
             </Link>
             <Link to="/for-everyone" className="underline-offset-4 hover:underline">
-              For everyone
+              Not just for children
             </Link>
+
             <Link to="/our-promise" className="underline-offset-4 hover:underline">
               Our promise
             </Link>
