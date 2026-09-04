@@ -1,62 +1,89 @@
 import type { ReactNode } from "react";
 
-export const problems = [
+export const problemsParents = [
   {
-    title: "The daily struggle",
-    body: "The same arguments happen in millions of homes, every single day.",
+    title: "Dedicated effort, endless friction",
+    body: "Parents make tireless sacrifices, but without a structured system, daily routines turn into repetitive, exhausting arguments.",
   },
   {
-    title: "Rewards that miss the point",
-    body: "Most apps hand out more screen time to solve a screen time problem.",
+    title: "Counterproductive rewards",
+    body: "Existing digital apps hand out more screen time and addictive notifications to solve a screen-addiction issue.",
   },
   {
-    title: "Nothing to hold on to",
-    body: "Children need something real to work towards, not another notification.",
+    title: "Zero real touchpoints",
+    body: "Children are overwhelmed by digital noise, leaving them with no physical, tactile anchor to make their daily efforts feel real and rewarding.",
+  },
+];
+
+export const problemsAdults = [
+  {
+    title: "Digital fragmentation",
+    body: "Adult productivity apps live inside the very smartphones that cause endless distraction in the first place.",
+  },
+  {
+    title: "Superficial gamification",
+    body: "Digital streak counters and badges fail to build deep, lasting intrinsic motivation.",
+  },
+  {
+    title: "Missing physical accountability",
+    body: "Without a visible, dedicated physical presence in your space, daily adult goals are easily forgotten behind open tabs and phone notifications.",
+  },
+];
+
+export const beliefs = [
+  {
+    title: "Discipline over obedience",
+    body: "We foster intrinsic self-mastery and internal motivation, not forced compliance or transactional chores.",
+  },
+  {
+    title: "Zero peer comparison",
+    body: "No global leaderboards, social pressure, or public rankings. Every child competes only with their own past self.",
+  },
+  {
+    title: "Age-appropriate science",
+    body: "Grounded in behavioural research, with tailored habit modules designed for primary, middle, and high schoolers.",
+  },
+  {
+    title: "Complete parental trust",
+    body: "We put full authority back in the hands of parents, trusting you completely to guide and reward your child's journey.",
+  },
+  {
+    title: "Tailored screen-free windows",
+    body: "Parents freely set their own daily phone-free time slots and durations to align with the family's work and school schedules.",
+  },
+  {
+    title: "Family-first flexibility",
+    body: "No rigid, hard-and-fast rules. The system adapts to fit your household's unique daily rhythm and values.",
   },
 ];
 
 export const steps = [
   {
-    title: "Choose the habit",
-    body: "Pick two or three things that matter to your family, reading, sleeping on time, a walk, no phone at dinner. Write them on the board.",
+    title: "Choose the habits, screen-free setup",
+    body: "Select 15 to 20 daily habits that matter to your child and your household, such as reading, sleeping on time, tidying up, or phone-free meals. Print your customised habit sheet and slide it into the tactile wooden board.",
   },
   {
-    title: "Mark it done, on paper",
-    body: "Your child ticks off the habit on the physical board itself. No screen, no app, nothing digital touches their hands.",
+    title: "Mark it done, child self-evaluation",
+    body: "Your child physically ticks off completed habits on top of the wooden board. No screens or apps touch their hands. This tactile routine fosters self-evaluation, personal responsibility, and daily pride.",
   },
   {
-    title: "Earn it, then enjoy it",
-    body: "Once a day, a parent opens the private app and logs what was done. Steady effort adds up to a real reward later, never cash, never a ranking against other children.",
+    title: "Daily parent-granted points and mutual rewards",
+    body: "Once a day, open the free private app. You review the board and personally award daily points based on effort. The platform also honours parental penance: parents earn bonus points for their own consistency, active guidance, and verified phone-free time.",
   },
 ];
 
-export const ages = [
+export const adultSteps = [
   {
-    title: "In their twenties",
-    items: [
-      "Going to the gym regularly",
-      "Giving up smoking",
-      "Saving a little money each month",
-      "Reading before bed",
-    ],
+    title: "Set your personal mastery benchmarks",
+    body: "Select 15 to 20 high-value daily habits aligned with your fitness, learning, and professional goals, such as deep work blocks, workouts, daily reading, or phone-free focus windows. Print your habit insert and slide it into your physical board.",
   },
   {
-    title: "In their thirties",
-    items: [
-      "A few minutes of quiet meditation",
-      "An evening away from the phone",
-      "Drinking enough water",
-      "Waking up early",
-    ],
+    title: "Mark it done, tactile physical accountability",
+    body: "Physically tick off completed habits on the wooden board throughout the day. No phone apps or digital distractions interrupt your flow, keeping a visible anchor in your workspace.",
   },
   {
-    title: "In their sixties",
-    items: [
-      "A daily walk",
-      "Taking medicine on time",
-      "A quiet moment of prayer",
-      "Keeping a journal",
-    ],
+    title: "Screen-free hold, consistency and capped points",
+    body: "To claim daily points, open the private app, activate your screen-free session, and set your phone aside untouched. If the phone-free time is honoured, the app awards points for the duration, along with bonus points for board consistency. All self-earned points operate under structured capping rules.",
   },
 ];
 
@@ -110,6 +137,6 @@ export const promises: { icon: ReactNode; title: string; body: string }[] = [
   {
     icon: <CoinIcon />,
     title: "Never treated as money",
-    body: "Points cannot be sold, transferred, or cashed out. They can only be turned into a real, useful reward.",
+    body: "Points cannot be sold, transferred, or cashed out. They can only be turned into a real, useful reward, or donated to social needs, which Ennotraan ethically parks for the needy.",
   },
 ];
