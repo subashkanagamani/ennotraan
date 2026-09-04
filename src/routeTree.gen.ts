@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ForEveryoneRouteImport } from './routes/for-everyone'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as JoinRouteImport } from './routes/join'
+import { Route as OurPromiseRouteImport } from './routes/our-promise'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForEveryoneRoute = ForEveryoneRouteImport.update({
+  id: '/for-everyone',
+  path: '/for-everyone',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JoinRoute = JoinRouteImport.update({
+  id: '/join',
+  path: '/join',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurPromiseRoute = OurPromiseRouteImport.update({
+  id: '/our-promise',
+  path: '/our-promise',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/for-everyone': typeof ForEveryoneRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/join': typeof JoinRoute
+  '/our-promise': typeof OurPromiseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/for-everyone': typeof ForEveryoneRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/join': typeof JoinRoute
+  '/our-promise': typeof OurPromiseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/for-everyone': typeof ForEveryoneRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/join': typeof JoinRoute
+  '/our-promise': typeof OurPromiseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/for-everyone'
+    | '/how-it-works'
+    | '/join'
+    | '/our-promise'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/for-everyone'
+    | '/how-it-works'
+    | '/join'
+    | '/our-promise'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/for-everyone'
+    | '/how-it-works'
+    | '/join'
+    | '/our-promise'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ForEveryoneRoute: typeof ForEveryoneRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  JoinRoute: typeof JoinRoute
+  OurPromiseRoute: typeof OurPromiseRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/for-everyone': {
+      id: '/for-everyone'
+      path: '/for-everyone'
+      fullPath: '/for-everyone'
+      preLoaderRoute: typeof ForEveryoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/join': {
+      id: '/join'
+      path: '/join'
+      fullPath: '/join'
+      preLoaderRoute: typeof JoinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-promise': {
+      id: '/our-promise'
+      path: '/our-promise'
+      fullPath: '/our-promise'
+      preLoaderRoute: typeof OurPromiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ForEveryoneRoute: ForEveryoneRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  JoinRoute: JoinRoute,
+  OurPromiseRoute: OurPromiseRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

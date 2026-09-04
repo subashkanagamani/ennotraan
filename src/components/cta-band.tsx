@@ -1,0 +1,40 @@
+import { Link } from "@tanstack/react-router";
+import { motion } from "motion/react";
+import { Reveal } from "./motion";
+
+export function CtaBand({
+  title = "Join today. It costs nothing, now or later.",
+  body = "Leave your details and our team will personally reach out to welcome you in.",
+}: {
+  title?: string;
+  body?: string;
+}) {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-20">
+      <Reveal>
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-leaf px-8 py-16 text-leaf-foreground sm:px-14">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-gold/30 blur-3xl drift-slow"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-28 -left-16 h-72 w-72 rounded-full bg-background/20 blur-3xl drift-slower"
+          />
+          <div className="relative max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl">{title}</h2>
+            <p className="mt-5 text-lg leading-relaxed opacity-90">{body}</p>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} className="mt-8 inline-block">
+              <Link
+                to="/join"
+                className="inline-block rounded-full bg-background px-8 py-4 text-foreground shadow-soft"
+              >
+                Join free, no cost ever
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
