@@ -6,17 +6,20 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Why we built Ennotraan — for families, not profit" },
+      { title: "Why we built Ennotraan — powered by purpose, not profit" },
       {
         name: "description",
         content:
-          "Ennotraan is a free social initiative by PPLMeliorate Services Private Limited, a recognised startup in Tamil Nadu, built for families rather than profit.",
+          "Ennotraan is offered completely free to families. We sustain operations through modest referral commissions from reward reimbursement partners, never child data or ads.",
       },
-      { property: "og:title", content: "Why we built Ennotraan — for families, not profit" },
+      {
+        property: "og:title",
+        content: "Why we built Ennotraan — powered by purpose, not profit",
+      },
       {
         property: "og:description",
         content:
-          "If we ever have to choose between what is good for a child and what is good for a business, the child comes first, always.",
+          "If we ever must choose between what is good for society and what is good for a business, society comes first, always.",
       },
     ],
   }),
@@ -29,8 +32,8 @@ const values = [
     body: "There is no paid tier waiting behind the door. Families pay nothing, today or ever.",
   },
   {
-    title: "The child comes first",
-    body: "Every decision is tested against one question: is this good for the child in the home?",
+    title: "Never monetised through children",
+    body: "No child data, no ads, no hidden fees. The platform is sustained by partner referrals, not by families.",
   },
   {
     title: "Built slowly, properly",
@@ -42,9 +45,9 @@ function About() {
   return (
     <>
       <PageHero
-        eyebrow="Why we built it"
-        title="This was built for families, not for profit."
-        intro="Ennotraan is offered free because we believe every family deserves a simple, honest tool to build good habits, not because we expect something back."
+        eyebrow="Why we built this"
+        title="Offered completely free, powered by purpose, not profit off children."
+        intro="Ennotraan is offered completely free to families because we believe every household deserves a simple, honest tool to build good habits and reclaim digital balance."
       />
 
       <section className="relative overflow-hidden bg-leaf px-6 py-24 text-leaf-foreground">
@@ -54,14 +57,22 @@ function About() {
         />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xl leading-relaxed sm:text-2xl">
-            This began as a small idea to help households cope with screens, and it stays true to
-            that purpose. If we ever have to choose between what is good for a child and what is
-            good for a business, the child comes first, always.
+            This began as a heartfelt mission to help families cope with screens, and it stays true
+            to that purpose. If we ever must choose between what is good for society and what is
+            good for a business, society comes first, always.
           </p>
         </Reveal>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
+        <Reveal className="mb-12 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          <p>
+            To keep the platform completely free for every home, we sustain our operations by
+            earning modest referral commissions through our reward reimbursement partners, trusted
+            brands offering family-friendly discounts when discipline points are redeemed. We never
+            monetise through child data, ads, or hidden fees.
+          </p>
+        </Reveal>
         <StaggerGroup className="grid gap-6 md:grid-cols-3">
           {values.map((value) => (
             <StaggerItem key={value.title} className="h-full">

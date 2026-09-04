@@ -12,13 +12,13 @@ export const Route = createFileRoute("/how-it-works")({
       {
         name: "description",
         content:
-          "Choose the habit, mark it done on a paper board, and let a parent log it in a private app. Three steps, no screen for your child.",
+          "Choose 15 to 20 habits, let your child tick them off on a wooden board, and award daily points in a free private app. No screen for your child.",
       },
       { property: "og:title", content: "How Ennotraan works — three simple steps" },
       {
         property: "og:description",
         content:
-          "A paper board for your child, a private app for the parent, and a real reward earned slowly over a month.",
+          "A physical habit board for your child, a free private app for the parent, and real rewards earned slowly through partner co-pay discounts.",
       },
     ],
   }),
@@ -30,8 +30,8 @@ function HowItWorks() {
     <>
       <PageHero
         eyebrow="How it works"
-        title="Three simple steps. Nothing new for your child to learn."
-        intro="No app for your child, no logins, no notifications. Just a board on the wall and one honest minute from a parent each day."
+        title="Three simple steps to meliorate parental penance and build lifelong child habits."
+        intro="No app for your child, no logins, no notifications. Just a wooden board with a printed habit sheet, and one honest minute from a parent each day."
       />
 
       <section className="mx-auto max-w-6xl px-6 py-12">
@@ -68,6 +68,18 @@ function HowItWorks() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-6xl px-6 pb-4">
+        <Reveal className="rounded-3xl border border-border bg-card/70 p-8 backdrop-blur-sm sm:p-10">
+          <h2 className="text-2xl">Where the points go</h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
+            Accumulated family points can later be redeemed through our separate reimbursement
+            module, where curated reward reimbursement partners offer co-pay discounts on
+            educational tools, books, skill kits, apparel, and family lifestyle rewards. Never for
+            cash, screen time, or peer competition.
+          </p>
+        </Reveal>
+      </section>
+
       <section className="mx-auto max-w-6xl px-6 py-16">
         <Reveal className="rounded-3xl bg-blush p-8 sm:p-12">
           <h2 className="text-2xl sm:text-3xl">What your child never touches</h2>
@@ -85,8 +97,8 @@ function HowItWorks() {
       </section>
 
       <CtaBand
-        title="Start with two habits this week."
-        body="Join free and we will help you set up the board with your family."
+        title="Set up your board this week."
+        body="Join free and we will help you set it up with your family."
       />
     </>
   );
