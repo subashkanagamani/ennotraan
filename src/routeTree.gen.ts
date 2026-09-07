@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CollegesRouteImport } from './routes/colleges'
+import { Route as CorporatesRouteImport } from './routes/corporates'
 import { Route as ForEveryoneRouteImport } from './routes/for-everyone'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as JoinRouteImport } from './routes/join'
@@ -31,6 +32,11 @@ const AboutRoute = AboutRouteImport.update({
 const CollegesRoute = CollegesRouteImport.update({
   id: '/colleges',
   path: '/colleges',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CorporatesRoute = CorporatesRouteImport.update({
+  id: '/corporates',
+  path: '/corporates',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ForEveryoneRoute = ForEveryoneRouteImport.update({
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/colleges': typeof CollegesRoute
+  '/corporates': typeof CorporatesRoute
   '/for-everyone': typeof ForEveryoneRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/colleges': typeof CollegesRoute
+  '/corporates': typeof CorporatesRoute
   '/for-everyone': typeof ForEveryoneRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
@@ -84,6 +92,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/colleges': typeof CollegesRoute
+  '/corporates': typeof CorporatesRoute
   '/for-everyone': typeof ForEveryoneRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/colleges'
+    | '/corporates'
     | '/for-everyone'
     | '/how-it-works'
     | '/join'
@@ -106,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/colleges'
+    | '/corporates'
     | '/for-everyone'
     | '/how-it-works'
     | '/join'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/colleges'
+    | '/corporates'
     | '/for-everyone'
     | '/how-it-works'
     | '/join'
@@ -127,6 +139,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CollegesRoute: typeof CollegesRoute
+  CorporatesRoute: typeof CorporatesRoute
   ForEveryoneRoute: typeof ForEveryoneRoute
   HowItWorksRoute: typeof HowItWorksRoute
   JoinRoute: typeof JoinRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/colleges'
       fullPath: '/colleges'
       preLoaderRoute: typeof CollegesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corporates': {
+      id: '/corporates'
+      path: '/corporates'
+      fullPath: '/corporates'
+      preLoaderRoute: typeof CorporatesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/for-everyone': {
@@ -199,6 +219,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CollegesRoute: CollegesRoute,
+  CorporatesRoute: CorporatesRoute,
   ForEveryoneRoute: ForEveryoneRoute,
   HowItWorksRoute: HowItWorksRoute,
   JoinRoute: JoinRoute,

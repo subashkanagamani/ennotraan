@@ -5,10 +5,14 @@ import logo from "@/assets/ennotraan-logo.png.asset.json";
 
 const nav = [
   { to: "/how-it-works", label: "How it works" },
+  { to: "/schools", label: "Schools" },
+  { to: "/colleges", label: "Colleges" },
+  { to: "/corporates", label: "Corporates" },
   { to: "/for-everyone", label: "Not just for children" },
   { to: "/our-promise", label: "Our promise" },
   { to: "/about", label: "Why we built it" },
 ] as const;
+
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
