@@ -3,14 +3,14 @@ import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import type { InstitutionContent } from "@/content/institutions";
-import schoolImage from "@/assets/schools-habits.jpg";
+import schoolImage from "@/assets/schools-hero.jpg.asset.json";
 import collegeImage from "@/assets/college-habits.jpg";
 import workplaceImage from "@/assets/workplace-habits.jpg";
 
 const images = {
-  schools: { src: schoolImage, alt: "Schoolchildren and their teacher enjoying a shared habit-board activity" },
-  colleges: { src: collegeImage, alt: "College students building goals together on campus" },
-  corporates: { src: workplaceImage, alt: "Professionals sharing a positive team habit activity" },
+  schools: { src: schoolImage.url, width: 1370, height: 1148, alt: "Schoolchildren using the Ennotraan daily routine evaluation board in class" },
+  colleges: { src: collegeImage, width: 1400, height: 700, alt: "College students building goals together on campus" },
+  corporates: { src: workplaceImage, width: 1400, height: 700, alt: "Professionals sharing a positive team habit activity" },
 };
 
 export function InstitutionPage({ content }: { content: InstitutionContent }) {
@@ -21,7 +21,7 @@ export function InstitutionPage({ content }: { content: InstitutionContent }) {
 
       <Reveal className="mx-auto max-w-6xl px-6 pb-14">
         <div className="relative overflow-hidden rounded-[2rem] shadow-soft">
-          <img src={image.src} alt={image.alt} width={1400} height={900} className="aspect-[14/7] w-full object-cover" />
+          <img src={image.src} alt={image.alt} width={image.width} height={image.height} className="w-full object-cover" style={{ aspectRatio: `${image.width} / ${image.height}` }} />
           <div className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-primary via-coral to-gold" />
           <motion.div aria-hidden animate={{ x: [0, 18, 0], y: [0, -10, 0] }} transition={{ duration: 7, repeat: Infinity }} className="absolute right-6 top-6 h-14 w-14 rounded-full border-[10px] border-background/80" />
         </div>
