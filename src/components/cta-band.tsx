@@ -15,11 +15,11 @@ export function CtaBand({
         <motion.div whileHover={{ y: -4 }} className="relative overflow-hidden rounded-[2rem] bg-primary px-8 py-16 text-primary-foreground shadow-soft sm:px-14">
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-coral/45 blur-3xl drift-slow"
+            className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rotate-12 rounded-[30%] bg-coral/45 blur-3xl drift-slow"
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute -bottom-28 -left-16 h-72 w-72 rounded-full bg-gold/35 blur-3xl drift-slower"
+            className="pointer-events-none absolute -bottom-28 -left-16 h-72 w-72 -rotate-12 rounded-[28%] bg-gold/35 blur-3xl drift-slower"
           />
           <div className="relative max-w-2xl">
             <h2 className="text-3xl sm:text-4xl">{title}</h2>

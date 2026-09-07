@@ -15,8 +15,8 @@ export function PageHero({
   return (
     <section className="relative mx-auto max-w-6xl overflow-hidden px-6 pb-12 pt-16 md:pt-24">
       <div aria-hidden className="absolute right-[8%] top-12 h-24 w-24 rounded-[2rem] bg-coral/15 color-shift" />
-      <div aria-hidden className="absolute right-[2%] top-36 h-10 w-10 rounded-full bg-gold/55 float-gentle" />
-      <div aria-hidden className="absolute right-[20%] top-8 h-5 w-5 rounded-full bg-primary/45 drift-slower" />
+      <div aria-hidden className="absolute right-[2%] top-36 h-10 w-10 rotate-12 rounded-md bg-gold/55 float-gentle" />
+      <div aria-hidden className="absolute right-[20%] top-8 h-5 w-5 rotate-45 rounded-sm bg-primary/45 drift-slower" />
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}

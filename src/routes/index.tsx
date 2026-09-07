@@ -113,8 +113,8 @@ function Home() {
           className="relative isolate"
         >
           <div className="absolute -left-8 -top-7 h-24 w-24 rounded-[2rem] bg-coral/75 float-gentle" />
-          <div className="absolute -bottom-7 -right-5 h-28 w-28 rounded-full bg-gold/75 drift-slow" />
-          <div className="absolute -right-7 top-16 h-14 w-14 rounded-full bg-mint orbit-slow" />
+          <div className="absolute -bottom-7 -right-5 h-28 w-28 rotate-12 rounded-[30%] bg-gold/75 drift-slow" />
+          <div className="absolute -right-7 top-16 h-14 w-14 rotate-45 rounded-lg bg-mint orbit-slow" />
           <motion.img
             src={familyHabits}
             alt="A mother and daughter enjoying their daily habit-board ritual"
@@ -198,7 +198,7 @@ function Home() {
       <section className="relative overflow-hidden bg-ink px-6 py-28 text-primary-foreground">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral/30 blur-[100px] drift-slow"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rotate-12 rounded-[30%] bg-coral/30 blur-[100px] drift-slow"
         />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <span aria-hidden className="block font-display text-7xl leading-none text-gold opacity-80">
