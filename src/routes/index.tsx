@@ -17,11 +17,13 @@ export const Route = createFileRoute("/")({
           "A 100% free, screen-free way to build good habits. A physical board plus a private parent app for disciplined children, empowered parents, and self-driven adults.",
       },
       { property: "og:title", content: "Ennotraan — one small habit a day, screen-free and free" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content:
           "Build lifelong daily habits for every generation at home, without placing a screen in your child's hands. Offered completely free.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,

@@ -18,11 +18,13 @@ export const Route = createFileRoute("/for-everyone")({
         property: "og:title",
         content: "Not just for children — Ennotraan for adult self-discipline",
       },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content:
           "A physical habit board and screen-free sessions that help adults build fitness, learning, and deep work habits that last.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ForEveryone,

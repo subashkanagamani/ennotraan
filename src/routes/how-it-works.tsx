@@ -15,11 +15,13 @@ export const Route = createFileRoute("/how-it-works")({
           "Choose 15 to 20 habits, let your child tick them off on a wooden board, and award daily points in a free private app. No screen for your child.",
       },
       { property: "og:title", content: "How Ennotraan works — three simple steps" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content:
           "A physical habit board for your child, a free private app for the parent, and real rewards earned slowly through partner co-pay discounts.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HowItWorks,

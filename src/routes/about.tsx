@@ -16,11 +16,13 @@ export const Route = createFileRoute("/about")({
         property: "og:title",
         content: "Why we built Ennotraan — powered by purpose, not profit",
       },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content:
           "If we ever must choose between what is good for society and what is good for a business, society comes first, always.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: About,

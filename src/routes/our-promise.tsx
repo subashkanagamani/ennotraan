@@ -15,10 +15,12 @@ export const Route = createFileRoute("/our-promise")({
           "Ennotraan collects no data about your child, has no leaderboards, releases points monthly, and never treats points as money.",
       },
       { property: "og:title", content: "Our promise — no child data, no leaderboards" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content: "We built Ennotraan to protect your home, not to study it. Four promises we keep.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: OurPromise,
