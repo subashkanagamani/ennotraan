@@ -50,10 +50,10 @@ function About() {
         intro="Ennotraan is offered completely free to families because we believe every household deserves a simple, honest tool to build good habits and reclaim digital balance."
       />
 
-      <section className="relative overflow-hidden bg-leaf px-6 py-24 text-leaf-foreground">
+      <section className="relative overflow-hidden bg-primary px-6 py-24 text-primary-foreground">
         <div
           aria-hidden
-          className="pointer-events-none absolute -left-24 top-0 h-96 w-96 rounded-full bg-gold/25 blur-[100px] drift-slow"
+          className="pointer-events-none absolute -left-24 top-0 h-96 w-96 rounded-full bg-coral/45 blur-[100px] drift-slow"
         />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xl leading-relaxed sm:text-2xl">
@@ -74,9 +74,9 @@ function About() {
           </p>
         </Reveal>
         <StaggerGroup className="grid gap-6 md:grid-cols-3">
-          {values.map((value) => (
+          {values.map((value, index) => (
             <StaggerItem key={value.title} className="h-full">
-              <div className="h-full rounded-3xl border border-border bg-card/70 p-8 backdrop-blur-sm">
+              <div className={`h-full rounded-2xl border border-border p-8 shadow-soft ${index === 0 ? "bg-sky" : index === 1 ? "bg-lilac" : "bg-mint"}`}>
                 <h2 className="text-xl">{value.title}</h2>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{value.body}</p>
               </div>

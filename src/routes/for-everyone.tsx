@@ -44,7 +44,7 @@ function ForEveryone() {
               <motion.div
                 whileHover={{ y: -8, rotate: i === 1 ? 0 : i === 0 ? -0.6 : 0.6 }}
                 transition={{ type: "spring", stiffness: 260, damping: 18 }}
-                className="h-full rounded-3xl bg-blush p-8 shadow-soft"
+                className={`h-full rounded-2xl p-8 shadow-soft ${i === 0 ? "bg-sky" : i === 1 ? "bg-lilac" : "bg-mint"}`}
               >
                 <span className="font-display text-4xl text-primary">{i + 1}</span>
                 <h2 className="mt-4 text-xl">{step.title}</h2>
@@ -54,7 +54,7 @@ function ForEveryone() {
           ))}
         </StaggerGroup>
 
-        <Reveal className="mt-12 rounded-3xl border border-border bg-card/70 p-8 backdrop-blur-sm sm:p-10">
+        <Reveal className="mt-12 rounded-2xl border border-primary/15 bg-secondary p-8 sm:p-10">
           <p className="max-w-3xl leading-relaxed text-muted-foreground">
             Self-earned adult discipline points can be redeemed through our separate reimbursement
             module for co-pay discounts with partner brands on books, wellness gear, productivity

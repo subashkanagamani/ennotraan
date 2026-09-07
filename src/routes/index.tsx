@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import lamp from "@/assets/lamp.jpg";
+import familyHabits from "@/assets/family-habits.jpg";
 import { CtaBand } from "@/components/cta-band";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import { beliefs, problemsAdults, problemsParents, steps } from "@/content/site";
@@ -109,18 +110,21 @@ function Home() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="relative"
+          className="relative isolate"
         >
-          <div className="absolute left-[24%] top-[58%] h-28 w-28 rounded-full bg-primary/30 blur-2xl flame-glow" />
+          <div className="absolute -left-8 -top-7 h-24 w-24 rounded-[2rem] bg-coral/75 float-gentle" />
+          <div className="absolute -bottom-7 -right-5 h-28 w-28 rounded-full bg-gold/75 drift-slow" />
+          <div className="absolute -right-7 top-16 h-14 w-14 rounded-full bg-mint orbit-slow" />
           <motion.img
-            src={lamp}
-            alt="A hand lighting a small oil lamp"
-            width={1024}
-            height={1024}
+            src={familyHabits}
+            alt="A mother and daughter enjoying their daily habit-board ritual"
+            width={1400}
+            height={1000}
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative w-full rounded-[2rem] mix-blend-multiply"
+            className="relative aspect-[7/6] w-full rounded-[2rem] object-cover shadow-soft"
           />
+          <motion.img src={lamp} alt="A hand lighting a small oil lamp" width={1024} height={1024} loading="lazy" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 8, repeat: Infinity }} className="absolute -bottom-8 -left-8 hidden w-32 rounded-2xl border-4 border-background shadow-soft sm:block" />
         </motion.div>
       </section>
 
@@ -153,7 +157,7 @@ function Home() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="h-full rounded-2xl border border-border bg-card/70 p-7 backdrop-blur-sm"
+                className="h-full rounded-2xl border border-border bg-card p-7 shadow-soft"
               >
                 <h4 className="text-xl">{item.title}</h4>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
@@ -180,7 +184,7 @@ function Home() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="h-full rounded-2xl border border-border bg-card/70 p-7 backdrop-blur-sm"
+                className="h-full rounded-2xl border border-border bg-card p-7 shadow-soft"
               >
                 <h4 className="text-xl">{item.title}</h4>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
@@ -191,10 +195,10 @@ function Home() {
       </section>
 
       {/* Belief */}
-      <section className="relative overflow-hidden bg-ink px-6 py-28 text-background">
+      <section className="relative overflow-hidden bg-ink px-6 py-28 text-primary-foreground">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/15 blur-[100px] drift-slow"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral/30 blur-[100px] drift-slow"
         />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <span aria-hidden className="block font-display text-7xl leading-none text-gold opacity-80">
@@ -221,7 +225,7 @@ function Home() {
         <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {beliefs.map((item) => (
             <StaggerItem key={item.title} className="h-full">
-              <div className="h-full rounded-3xl border border-border bg-card/70 p-7 backdrop-blur-sm">
+              <div className={`h-full rounded-2xl p-7 shadow-soft ${item.title.length % 3 === 0 ? "bg-mint" : item.title.length % 2 === 0 ? "bg-lilac" : "bg-sky"}`}>
                 <h3 className="text-xl">{item.title}</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
               </div>

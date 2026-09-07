@@ -3,6 +3,7 @@ export type InstitutionContent = {
   eyebrow: string;
   title: string;
   intro: string;
+  image: "schools" | "colleges" | "corporates";
   challenges: { title: string; body: string }[];
   program: { title: string; body: string }[];
   outcomes: string[];
@@ -17,6 +18,7 @@ export const schools: InstitutionContent = {
   title: "A screen-free habit system that fits inside the school day.",
   intro:
     "Ennotraan gives every classroom a physical habit board and every family a shared rhythm, so discipline is practised at school and reinforced at home.",
+  image: "schools",
   challenges: [
     {
       title: "Attention is fragmenting",
@@ -67,6 +69,7 @@ export const colleges: InstitutionContent = {
   title: "Self-discipline for students who finally control their own time.",
   intro:
     "College is the first place nobody checks your routine. Ennotraan gives students a visible, screen-free anchor for study blocks, sleep, fitness, and focus.",
+  image: "colleges",
   challenges: [
     {
       title: "Total freedom, no structure",
@@ -117,6 +120,7 @@ export const corporates: InstitutionContent = {
   title: "Deep work and wellbeing, anchored on the desk, not in another app.",
   intro:
     "Ennotraan gives teams a tactile daily board and honest screen-free sessions, so focus and wellbeing habits stay visible in the workplace.",
+  image: "corporates",
   challenges: [
     {
       title: "Meetings and pings own the day",
