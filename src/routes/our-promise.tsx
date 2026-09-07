@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
+import ourPromiseHero from "@/assets/our-promise-hero.jpg";
 import { StaggerGroup, StaggerItem } from "@/components/motion";
 import { promises } from "@/content/site";
 
@@ -33,6 +34,7 @@ function OurPromise() {
         eyebrow="Our promise"
         title="We built this to protect your home, not to study it."
         intro="Four decisions we made early, and will not walk back."
+      image={{ src: ourPromiseHero, alt: "A calm family living room in the evening with phones set aside in a basket", width: 1200, height: 900 }}
       />
 
       <section className="mx-auto max-w-6xl px-6 py-12">

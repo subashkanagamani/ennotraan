@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
+import aboutHero from "@/assets/about-hero.jpg";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 
 export const Route = createFileRoute("/about")({
@@ -50,6 +51,7 @@ function About() {
         eyebrow="Why we built this"
         title="Offered completely free, powered by purpose, not profit off children."
         intro="Ennotraan is offered completely free to families because we believe every household deserves a simple, honest tool to build good habits and reclaim digital balance."
+      image={{ src: aboutHero, alt: "The Ennotraan team sketching ideas together around a table", width: 1200, height: 900 }}
       />
 
       <section className="relative overflow-hidden bg-primary px-6 py-24 text-primary-foreground">

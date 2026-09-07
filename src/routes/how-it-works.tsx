@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
+import howItWorksHero from "@/assets/how-it-works-hero.jpg";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import { steps } from "@/content/site";
 
@@ -34,6 +35,7 @@ function HowItWorks() {
         eyebrow="How it works"
         title="Three simple steps to meliorate parental penance and build lifelong child habits."
         intro="No app for your child, no logins, no notifications. Just a wooden board with a printed habit sheet, and one honest minute from a parent each day."
+      image={{ src: howItWorksHero, alt: "A parent and child looking at a printed habit checklist at the kitchen table", width: 1200, height: 900 }}
       />
 
       <section className="mx-auto max-w-6xl px-6 py-12">

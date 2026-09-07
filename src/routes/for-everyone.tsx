@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
+import forEveryoneHero from "@/assets/for-everyone-hero.jpg";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import { adultSteps } from "@/content/site";
 
@@ -37,6 +38,7 @@ function ForEveryone() {
         eyebrow="Not just for children"
         title="One board. One app. Any age, any goal."
         intro="Three simple steps to master self-discipline, reclaim focus, and reward your own consistency."
+      image={{ src: forEveryoneHero, alt: "Adults of different ages building their own daily habits at home", width: 1200, height: 900 }}
       />
 
       <section className="mx-auto max-w-6xl px-6 py-12">
