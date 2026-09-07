@@ -118,13 +118,13 @@ function Home() {
           <div className="absolute -bottom-7 -right-5 h-28 w-28 rotate-12 rounded-[30%] bg-gold/75 drift-slow" />
           <div className="absolute -right-7 top-16 h-14 w-14 rotate-45 rounded-lg bg-mint orbit-slow" />
           <motion.img
-            src={familyHabits}
-            alt="A mother and daughter enjoying their daily habit-board ritual"
-            width={1400}
-            height={1000}
+            src={homeHeroBoard.url}
+            alt="A mother and daughter using their Ennotraan daily routine evaluation board together"
+            width={900}
+            height={1200}
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative aspect-[7/6] w-full rounded-[2rem] object-cover shadow-soft"
+            className="relative aspect-[3/4] w-full rounded-[2rem] object-cover shadow-soft"
           />
           <motion.img src={lamp} alt="A hand lighting a small oil lamp" width={1024} height={1024} loading="lazy" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 8, repeat: Infinity }} className="absolute -bottom-8 -left-8 hidden w-32 rounded-2xl border-4 border-background shadow-soft sm:block" />
         </motion.div>
