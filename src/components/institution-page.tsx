@@ -4,7 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import type { InstitutionContent } from "@/content/institutions";
 import schoolImage from "@/assets/schools-hero.jpg.asset.json";
-import collegeImage from "@/assets/college-habits.jpg";
+import collegeImage from "@/assets/colleges-hero.jpg.asset.json";
 import workplaceImage from "@/assets/workplace-habits.jpg";
 
 const images = {
