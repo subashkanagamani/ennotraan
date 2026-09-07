@@ -15,10 +15,12 @@ export const Route = createFileRoute("/our-promise")({
           "Ennotraan collects no data about your child, has no leaderboards, releases points monthly, and never treats points as money.",
       },
       { property: "og:title", content: "Our promise — no child data, no leaderboards" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content: "We built Ennotraan to protect your home, not to study it. Four promises we keep.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: OurPromise,
@@ -35,12 +37,12 @@ function OurPromise() {
 
       <section className="mx-auto max-w-6xl px-6 py-12">
         <StaggerGroup className="grid gap-6 sm:grid-cols-2">
-          {promises.map((item) => (
+          {promises.map((item, index) => (
             <StaggerItem key={item.title} className="h-full">
               <motion.div
                 whileHover={{ y: -6, scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 280, damping: 20 }}
-                className="group h-full rounded-3xl border border-border bg-card/80 p-8 backdrop-blur-sm"
+                className={`group h-full rounded-2xl border border-border p-8 shadow-soft ${index % 4 === 0 ? "bg-sky" : index % 4 === 1 ? "bg-lilac" : index % 4 === 2 ? "bg-mint" : "bg-coral/15"}`}
               >
                 <motion.span
                   className="inline-grid h-14 w-14 place-items-center rounded-2xl bg-leaf/12 text-leaf"

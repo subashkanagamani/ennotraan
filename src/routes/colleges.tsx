@@ -9,6 +9,8 @@ export const Route = createFileRoute("/colleges")({
       { name: "description", content: colleges.meta.description },
       { property: "og:title", content: colleges.meta.title },
       { property: "og:description", content: colleges.meta.description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: () => <InstitutionPage content={colleges} />,

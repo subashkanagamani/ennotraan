@@ -20,7 +20,7 @@ export function JoinForm() {
           initial={{ opacity: 0, scale: 0.96, y: 12 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="rounded-3xl bg-card p-8 shadow-soft sm:p-10"
+          className="rounded-2xl bg-mint p-8 shadow-soft sm:p-10"
         >
           <motion.span
             initial={{ scale: 0, rotate: -30 }}
@@ -46,7 +46,7 @@ export function JoinForm() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="rounded-3xl border border-border/70 bg-card/90 p-8 shadow-soft backdrop-blur-sm sm:p-10"
+          className="rounded-2xl border border-primary/15 bg-card p-8 shadow-soft sm:p-10"
         >
           <div className="grid gap-5">
             <label className="grid gap-2">

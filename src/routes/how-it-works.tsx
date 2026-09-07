@@ -15,11 +15,13 @@ export const Route = createFileRoute("/how-it-works")({
           "Choose 15 to 20 habits, let your child tick them off on a wooden board, and award daily points in a free private app. No screen for your child.",
       },
       { property: "og:title", content: "How Ennotraan works — three simple steps" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content:
           "A physical habit board for your child, a free private app for the parent, and real rewards earned slowly through partner co-pay discounts.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: HowItWorks,
@@ -50,7 +52,7 @@ function HowItWorks() {
                 <motion.div
                   whileHover={{ x: 6 }}
                   transition={{ type: "spring", stiffness: 250, damping: 20 }}
-                  className="flex gap-6 rounded-3xl border border-border/70 bg-card/70 p-7 backdrop-blur-sm sm:p-9"
+                  className={`flex gap-6 rounded-2xl border border-border p-7 shadow-soft sm:p-9 ${index === 0 ? "bg-sky" : index === 1 ? "bg-lilac" : "bg-mint"}`}
                 >
                   <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-primary font-display text-2xl text-primary-foreground">
                     {index + 1}
@@ -69,7 +71,7 @@ function HowItWorks() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-4">
-        <Reveal className="rounded-3xl border border-border bg-card/70 p-8 backdrop-blur-sm sm:p-10">
+        <Reveal className="rounded-2xl border border-primary/15 bg-secondary p-8 sm:p-10">
           <h2 className="text-2xl">Where the points go</h2>
           <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
             Accumulated family points can later be redeemed through our separate reimbursement
@@ -81,7 +83,7 @@ function HowItWorks() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16">
-        <Reveal className="rounded-3xl bg-blush p-8 sm:p-12">
+        <Reveal className="rounded-2xl bg-coral/15 p-8 sm:p-12">
           <h2 className="text-2xl sm:text-3xl">What your child never touches</h2>
           <ul className="mt-6 grid gap-3 text-lg text-foreground/80 sm:grid-cols-2">
             {["No app on their phone", "No account or password", "No notifications", "No screen time as a reward"].map(

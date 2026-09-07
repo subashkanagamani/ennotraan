@@ -88,6 +88,10 @@
   --leaf-foreground: oklch(1 0 0);
   --blush: oklch(0.95 0.028 252);
   --gold: oklch(0.7 0.1 250);
+  --coral: oklch(0.7 0.17 32);
+  --mint: oklch(0.88 0.09 165);
+  --lilac: oklch(0.89 0.065 302);
+  --sky: oklch(0.9 0.075 235);
   --shadow-soft: 0 18px 50px -30px oklch(0.4 0.11 266 / 0.38);
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Karla", system-ui, sans-serif;
@@ -160,21 +164,30 @@
   --color-leaf-foreground: var(--leaf-foreground);
   --color-blush: var(--blush);
   --color-gold: var(--gold);
+  --color-coral: var(--coral);
+  --color-mint: var(--mint);
+  --color-lilac: var(--lilac);
+  --color-sky: var(--sky);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --shadow-soft: var(--shadow-soft);
 }
 
 @layer base {
+  html {
+    overflow-x: clip;
+  }
+
   body {
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, blockquote {
     font-family: var(--font-display);
     font-weight: 500;
-    letter-spacing: -0.015em;
+    letter-spacing: 0;
   }
 }
 
@@ -201,6 +214,27 @@
   66% { transform: translate3d(-5%, 4%, 0) scale(0.95); }
 }
 
+@utility float-gentle {
+  animation: float-gentle 7s ease-in-out infinite;
+}
+@utility orbit-slow {
+  animation: orbit-slow 18s linear infinite;
+}
+@utility color-shift {
+  animation: color-shift 12s ease-in-out infinite alternate;
+}
+@keyframes float-gentle {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -14px, 0) rotate(3deg); }
+}
+@keyframes orbit-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes color-shift {
+  0% { opacity: 0.32; transform: scale(1); }
+  100% { opacity: 0.55; transform: scale(1.08); }
+}
+
 @utility grain {
   position: relative;
   &::after {
@@ -215,7 +249,7 @@
 }
 
 @utility text-shimmer {
-  background: linear-gradient(100deg, var(--primary) 0%, var(--gold) 45%, var(--leaf) 100%);
+  background: linear-gradient(100deg, var(--primary) 0%, var(--coral) 48%, var(--gold) 100%);
   background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;

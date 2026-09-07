@@ -13,11 +13,13 @@ export const Route = createFileRoute("/join")({
           "Leave your details and our team will personally welcome your family into Ennotraan. It is a free invitation, not a purchase.",
       },
       { property: "og:title", content: "Join Ennotraan free — no cost, now or later" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content:
           "We are opening Ennotraan to families first. Join free and we will reach out personally.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Join,
