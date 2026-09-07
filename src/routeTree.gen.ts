@@ -15,6 +15,7 @@ import { Route as ForEveryoneRouteImport } from './routes/for-everyone'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as JoinRouteImport } from './routes/join'
 import { Route as OurPromiseRouteImport } from './routes/our-promise'
+import { Route as SchoolsRouteImport } from './routes/schools'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const OurPromiseRoute = OurPromiseRouteImport.update({
   path: '/our-promise',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SchoolsRoute = SchoolsRouteImport.update({
+  id: '/schools',
+  path: '/schools',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
   '/our-promise': typeof OurPromiseRoute
+  '/schools': typeof SchoolsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
   '/our-promise': typeof OurPromiseRoute
+  '/schools': typeof SchoolsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
   '/our-promise': typeof OurPromiseRoute
+  '/schools': typeof SchoolsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/join'
     | '/our-promise'
+    | '/schools'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/join'
     | '/our-promise'
+    | '/schools'
   id:
     | '__root__'
     | '/'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/join'
     | '/our-promise'
+    | '/schools'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +118,7 @@ export interface RootRouteChildren {
   HowItWorksRoute: typeof HowItWorksRoute
   JoinRoute: typeof JoinRoute
   OurPromiseRoute: typeof OurPromiseRoute
+  SchoolsRoute: typeof SchoolsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurPromiseRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/schools': {
+      id: '/schools'
+      path: '/schools'
+      fullPath: '/schools'
+      preLoaderRoute: typeof SchoolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   HowItWorksRoute: HowItWorksRoute,
   JoinRoute: JoinRoute,
   OurPromiseRoute: OurPromiseRoute,
+  SchoolsRoute: SchoolsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
