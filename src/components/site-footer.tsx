@@ -3,10 +3,10 @@ import { Reveal } from "./motion";
 
 export function SiteFooter() {
   return (
-    <footer className="relative mt-24 overflow-hidden bg-ink px-6 py-16 text-background">
+    <footer className="relative mt-24 overflow-hidden bg-ink px-6 py-16 text-primary-foreground">
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-gold/20 blur-3xl drift-slow"
+        className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-coral/30 blur-3xl drift-slow"
       />
       <div
         aria-hidden
