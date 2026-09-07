@@ -120,11 +120,11 @@ function Home() {
           <motion.img
             src={homeHeroBoard.url}
             alt="A mother and daughter using their Ennotraan daily routine evaluation board together"
-            width={900}
-            height={1200}
+            width={1254}
+            height={1254}
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative aspect-[3/4] w-full rounded-[2rem] object-cover shadow-soft"
+            className="relative aspect-square w-full rounded-[2rem] object-cover shadow-soft"
           />
           <motion.img src={lamp} alt="A hand lighting a small oil lamp" width={1024} height={1024} loading="lazy" animate={{ rotate: [-2, 2, -2] }} transition={{ duration: 8, repeat: Infinity }} className="absolute -bottom-8 -left-8 hidden w-32 rounded-2xl border-4 border-background shadow-soft sm:block" />
         </motion.div>
