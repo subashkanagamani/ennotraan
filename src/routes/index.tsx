@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import lamp from "@/assets/lamp.jpg";
-import familyHabits from "@/assets/family-habits.jpg";
+import homeHeroBoard from "@/assets/home-hero-board.jpg.asset.json";
 import { CtaBand } from "@/components/cta-band";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import { beliefs, problemsAdults, problemsParents, steps } from "@/content/site";
