@@ -21,7 +21,7 @@ export function InstitutionPage({ content }: { content: InstitutionContent }) {
 
       <Reveal className="mx-auto max-w-6xl px-6 pb-14">
         <div className="relative overflow-hidden rounded-[2rem] shadow-soft">
-          <img src={image.src} alt={image.alt} width={1400} height={900} className="aspect-[14/7] w-full object-cover" />
+          <img src={image.src} alt={image.alt} width={image.width} height={image.height} className="w-full object-cover" style={{ aspectRatio: `${image.width} / ${image.height}` }} />
           <div className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-primary via-coral to-gold" />
           <motion.div aria-hidden animate={{ x: [0, 18, 0], y: [0, -10, 0] }} transition={{ duration: 7, repeat: Infinity }} className="absolute right-6 top-6 h-14 w-14 rounded-full border-[10px] border-background/80" />
         </div>
