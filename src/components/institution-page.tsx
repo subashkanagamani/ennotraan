@@ -4,12 +4,12 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import type { InstitutionContent } from "@/content/institutions";
 import schoolImage from "@/assets/schools-hero.jpg.asset.json";
-import collegeImage from "@/assets/college-habits.jpg";
+import collegeImage from "@/assets/colleges-hero.jpg.asset.json";
 import workplaceImage from "@/assets/workplace-habits.jpg";
 
 const images = {
   schools: { src: schoolImage.url, width: 1370, height: 1148, alt: "Schoolchildren using the Ennotraan daily routine evaluation board in class" },
-  colleges: { src: collegeImage, width: 1400, height: 700, alt: "College students building goals together on campus" },
+  colleges: { src: collegeImage.url, width: 1370, height: 1148, alt: "College students using the Ennotraan daily routine evaluation board on campus" },
   corporates: { src: workplaceImage, width: 1400, height: 700, alt: "Professionals sharing a positive team habit activity" },
 };
 
