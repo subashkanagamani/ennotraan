@@ -5,9 +5,11 @@ import logo from "@/assets/ennotraan-logo.png.asset.json";
 
 const nav = [
   { to: "/how-it-works", label: "How it works" },
+  { to: "/foundations", label: "Foundations" },
   { to: "/schools", label: "Schools" },
   { to: "/colleges", label: "Colleges" },
   { to: "/corporates", label: "Corporates" },
+  { to: "/partners", label: "Partners" },
   { to: "/for-everyone", label: "Not just for children" },
   { to: "/our-promise", label: "Our promise" },
   { to: "/about", label: "Why we built it" },
@@ -41,12 +43,12 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-0.5 lg:flex">
+        <nav className="hidden items-center gap-0.5 xl:flex">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="relative rounded-full px-3 py-2 text-[0.8rem] text-muted-foreground transition-colors hover:text-foreground"
+              className="relative rounded-full px-2.5 py-2 text-[0.78rem] text-muted-foreground transition-colors hover:text-foreground"
               activeProps={{ className: "text-foreground" }}
             >
               {({ isActive }) => (
@@ -77,7 +79,7 @@ export function SiteHeader() {
             aria-label="Menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-border lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-border xl:hidden"
           >
             <span className="relative block h-3 w-4">
               <motion.span
@@ -97,7 +99,7 @@ export function SiteHeader() {
         initial={false}
         animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="overflow-hidden border-t border-border/60 lg:hidden"
+        className="overflow-hidden border-t border-border/60 xl:hidden"
       >
         <nav className="mx-auto grid max-w-6xl gap-1 px-6 py-4">
           {[...nav, { to: "/join", label: "Join free" } as const].map((item) => (
