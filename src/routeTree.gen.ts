@@ -14,9 +14,11 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CollegesRouteImport } from './routes/colleges'
 import { Route as CorporatesRouteImport } from './routes/corporates'
 import { Route as ForEveryoneRouteImport } from './routes/for-everyone'
+import { Route as FoundationsRouteImport } from './routes/foundations'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as JoinRouteImport } from './routes/join'
 import { Route as OurPromiseRouteImport } from './routes/our-promise'
+import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as SchoolsRouteImport } from './routes/schools'
 
 const IndexRoute = IndexRouteImport.update({
@@ -44,6 +46,11 @@ const ForEveryoneRoute = ForEveryoneRouteImport.update({
   path: '/for-everyone',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FoundationsRoute = FoundationsRouteImport.update({
+  id: '/foundations',
+  path: '/foundations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HowItWorksRoute = HowItWorksRouteImport.update({
   id: '/how-it-works',
   path: '/how-it-works',
@@ -59,6 +66,11 @@ const OurPromiseRoute = OurPromiseRouteImport.update({
   path: '/our-promise',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SchoolsRoute = SchoolsRouteImport.update({
   id: '/schools',
   path: '/schools',
@@ -71,9 +83,11 @@ export interface FileRoutesByFullPath {
   '/colleges': typeof CollegesRoute
   '/corporates': typeof CorporatesRoute
   '/for-everyone': typeof ForEveryoneRoute
+  '/foundations': typeof FoundationsRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
   '/our-promise': typeof OurPromiseRoute
+  '/partners': typeof PartnersRoute
   '/schools': typeof SchoolsRoute
 }
 export interface FileRoutesByTo {
@@ -82,9 +96,11 @@ export interface FileRoutesByTo {
   '/colleges': typeof CollegesRoute
   '/corporates': typeof CorporatesRoute
   '/for-everyone': typeof ForEveryoneRoute
+  '/foundations': typeof FoundationsRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
   '/our-promise': typeof OurPromiseRoute
+  '/partners': typeof PartnersRoute
   '/schools': typeof SchoolsRoute
 }
 export interface FileRoutesById {
@@ -94,9 +110,11 @@ export interface FileRoutesById {
   '/colleges': typeof CollegesRoute
   '/corporates': typeof CorporatesRoute
   '/for-everyone': typeof ForEveryoneRoute
+  '/foundations': typeof FoundationsRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
   '/our-promise': typeof OurPromiseRoute
+  '/partners': typeof PartnersRoute
   '/schools': typeof SchoolsRoute
 }
 export interface FileRouteTypes {
@@ -107,9 +125,11 @@ export interface FileRouteTypes {
     | '/colleges'
     | '/corporates'
     | '/for-everyone'
+    | '/foundations'
     | '/how-it-works'
     | '/join'
     | '/our-promise'
+    | '/partners'
     | '/schools'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -118,9 +138,11 @@ export interface FileRouteTypes {
     | '/colleges'
     | '/corporates'
     | '/for-everyone'
+    | '/foundations'
     | '/how-it-works'
     | '/join'
     | '/our-promise'
+    | '/partners'
     | '/schools'
   id:
     | '__root__'
@@ -129,9 +151,11 @@ export interface FileRouteTypes {
     | '/colleges'
     | '/corporates'
     | '/for-everyone'
+    | '/foundations'
     | '/how-it-works'
     | '/join'
     | '/our-promise'
+    | '/partners'
     | '/schools'
   fileRoutesById: FileRoutesById
 }
@@ -141,9 +165,11 @@ export interface RootRouteChildren {
   CollegesRoute: typeof CollegesRoute
   CorporatesRoute: typeof CorporatesRoute
   ForEveryoneRoute: typeof ForEveryoneRoute
+  FoundationsRoute: typeof FoundationsRoute
   HowItWorksRoute: typeof HowItWorksRoute
   JoinRoute: typeof JoinRoute
   OurPromiseRoute: typeof OurPromiseRoute
+  PartnersRoute: typeof PartnersRoute
   SchoolsRoute: typeof SchoolsRoute
 }
 
@@ -184,6 +210,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ForEveryoneRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/foundations': {
+      id: '/foundations'
+      path: '/foundations'
+      fullPath: '/foundations'
+      preLoaderRoute: typeof FoundationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/how-it-works': {
       id: '/how-it-works'
       path: '/how-it-works'
@@ -205,6 +238,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurPromiseRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/schools': {
       id: '/schools'
       path: '/schools'
@@ -221,9 +261,11 @@ const rootRouteChildren: RootRouteChildren = {
   CollegesRoute: CollegesRoute,
   CorporatesRoute: CorporatesRoute,
   ForEveryoneRoute: ForEveryoneRoute,
+  FoundationsRoute: FoundationsRoute,
   HowItWorksRoute: HowItWorksRoute,
   JoinRoute: JoinRoute,
   OurPromiseRoute: OurPromiseRoute,
+  PartnersRoute: PartnersRoute,
   SchoolsRoute: SchoolsRoute,
 }
 export const routeTree = rootRouteImport
