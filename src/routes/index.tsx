@@ -5,18 +5,18 @@ import lamp from "@/assets/lamp.jpg";
 import homeHeroBoard from "@/assets/home-hero-board.jpg.asset.json";
 import { CtaBand } from "@/components/cta-band";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
-import { beliefs, problemsAdults, problemsParents, steps } from "@/content/site";
+import { problemsAdults, problemsParents } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ennotraan — one small habit a day, screen-free and free" },
+      { title: "Ennotraan — Daily Habits Define Your Destiny" },
       {
         name: "description",
         content:
           "A 100% free, screen-free way to build good habits. A physical board plus a private parent app for disciplined children, empowered parents, and self-driven adults.",
       },
-      { property: "og:title", content: "Ennotraan — one small habit a day, screen-free and free" },
+      { property: "og:title", content: "Ennotraan — Daily Habits Define Your Destiny" },
       { property: "og:type", content: "website" },
       {
         property: "og:description",
@@ -53,7 +53,7 @@ function Home() {
             A 100% free, screen-free way to build good habits and a family digital detox
           </motion.p>
           <h1 className="mt-6 text-4xl leading-[1.12] sm:text-5xl md:text-[3.5rem]">
-            {"One small habit a day.".split(" ").map((word, i) => (
+            {"Daily Habits Define Your Destiny.".split(" ").map((word, i) => (
               <motion.span
                 key={word + i}
                 initial={{ opacity: 0, y: 26, filter: "blur(6px)" }}
@@ -194,69 +194,6 @@ function Home() {
             </StaggerItem>
           ))}
         </StaggerGroup>
-      </section>
-
-      {/* Belief */}
-      <section className="relative overflow-hidden bg-ink px-6 py-28 text-primary-foreground">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rotate-12 rounded-[30%] bg-coral/30 blur-[100px] drift-slow"
-        />
-        <Reveal className="relative mx-auto max-w-3xl text-center">
-          <span aria-hidden className="block font-display text-7xl leading-none text-gold opacity-80">
-            &ldquo;
-          </span>
-          <blockquote className="mt-4 text-2xl leading-relaxed sm:text-3xl">
-            What it means to raise a child well is not something that just happens. It is a daily
-            practice of caring, one honest day at a time.
-          </blockquote>
-          <p className="mt-8 text-sm italic opacity-70">
-            Inspired by Thirukkural 70, a timeless Tamil insight: raising a virtuous child is not a
-            one-time achievement, but a daily practice of intentional care.
-          </p>
-        </Reveal>
-      </section>
-
-      {/* Beliefs */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <Reveal>
-          <h2 className="max-w-2xl text-3xl sm:text-4xl">
-            Empowering parents with trust, flexibility, and age-appropriate science.
-          </h2>
-        </Reveal>
-        <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {beliefs.map((item) => (
-            <StaggerItem key={item.title} className="h-full">
-              <div className={`h-full rounded-2xl p-7 shadow-soft ${item.title.length % 3 === 0 ? "bg-mint" : item.title.length % 2 === 0 ? "bg-lilac" : "bg-sky"}`}>
-                <h3 className="text-xl">{item.title}</h3>
-                <p className="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
-      </section>
-
-      {/* Three steps preview */}
-      <section className="mx-auto max-w-6xl px-6 pb-24">
-        <Reveal>
-          <h2 className="max-w-3xl text-3xl sm:text-4xl">
-            Three simple steps to meliorate parental penance and build lifelong child habits.
-          </h2>
-        </Reveal>
-        <StaggerGroup className="mt-14 grid gap-10 md:grid-cols-3">
-          {steps.map((step, index) => (
-            <StaggerItem key={step.title}>
-              <span className="font-display text-5xl text-primary">{index + 1}</span>
-              <h3 className="mt-4 text-xl">{step.title}</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">{step.body}</p>
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
-        <Reveal className="mt-12">
-          <Link to="/how-it-works" className="text-primary underline-offset-4 hover:underline">
-            Read the full walkthrough →
-          </Link>
-        </Reveal>
       </section>
 
       <CtaBand />

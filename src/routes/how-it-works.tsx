@@ -9,11 +9,11 @@ import { steps } from "@/content/site";
 export const Route = createFileRoute("/how-it-works")({
   head: () => ({
     meta: [
-      { title: "How Ennotraan works — three simple steps" },
+      { title: "How Ennotraan Works — Screen-Free Habits" },
       {
         name: "description",
         content:
-          "Choose 15 to 20 habits, let your child tick them off on a wooden board, and award daily points in a free private app. No screen for your child.",
+          "Choose 10 to 12 habits, let your child mark and reflect on their day, then award Ennotraan Points in a private parent app.",
       },
       { property: "og:title", content: "How Ennotraan works — three simple steps" },
       { property: "og:type", content: "website" },
@@ -33,8 +33,8 @@ function HowItWorks() {
     <>
       <PageHero
         eyebrow="How it works"
-        title="Three simple steps to meliorate parental penance and build lifelong child habits."
-        intro="No app for your child, no logins, no notifications. Just a wooden board with a printed habit sheet, and one honest minute from a parent each day."
+        title="A simple daily practice shared by parent and child."
+        intro="No apps, logins, or notifications for your child. Just a physical board with a customised habit sheet, space for daily achievements, and guaranteed screen-free family time."
       image={{ src: howItWorksHero, alt: "A parent and child looking at a printed habit checklist at the kitchen table", width: 1200, height: 900 }}
       />
 
@@ -74,21 +74,25 @@ function HowItWorks() {
 
       <section className="mx-auto max-w-6xl px-6 pb-4">
         <Reveal className="rounded-2xl border border-primary/15 bg-secondary p-8 sm:p-10">
-          <h2 className="text-2xl">Where the points go</h2>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Ennotraan Points</p>
+          <h2 className="mt-3 text-2xl sm:text-3xl">Badges of Honour, Not Currency</h2>
+          <p className="mt-3 text-lg text-foreground/80">First a mark of pride, second a gateway to family rewards.</p>
+          <h3 className="mt-8 text-xl">The value of Ennotraan Points</h3>
+          <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+            Above all, Ennotraan Points represent genuine pride—a tangible mark of honour for autonomous, trust-based discipline built quietly at home without social pressure, surveillance, or peer comparison.
+          </p>
+          <h3 className="mt-7 text-xl">Meaningful family rewards and social impact</h3>
           <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
-            Accumulated family points can later be redeemed through our separate reimbursement
-            module, where curated reward reimbursement partners offer co-pay discounts on
-            educational tools, books, skill kits, apparel, and family lifestyle rewards. Never for
-            cash, screen time, or peer competition.
+            Accumulated family points can later be redeemed through our separate Reimbursement Module, where curated Reward Reimbursement Partners offer exclusive co-pay discounts on educational tools, books, skill kits, apparel, and family lifestyle experiences. Families can also donate earned points toward social causes managed and fulfilled by Ennotraan. Points are never used for cash, screen time, or peer competition.
           </p>
         </Reveal>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-16">
         <Reveal className="rounded-2xl bg-coral/15 p-8 sm:p-12">
-          <h2 className="text-2xl sm:text-3xl">What your child never touches</h2>
+          <h2 className="text-2xl sm:text-3xl">What is for Children</h2>
           <ul className="mt-6 grid gap-3 text-lg text-foreground/80 sm:grid-cols-2">
-            {["No app on their phone", "No account or password", "No notifications", "No screen time as a reward"].map(
+            {["Child never touches the phone", "Child privacy is maintained", "No name or age is collected", "Self-discipline, not forced obedience"].map(
               (item) => (
                 <li key={item} className="flex gap-3">
                   <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
