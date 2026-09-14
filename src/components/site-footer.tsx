@@ -24,6 +24,9 @@ export function SiteFooter() {
             <Link to="/how-it-works" className="underline-offset-4 hover:underline">
               How it works
             </Link>
+            <Link to="/foundations" className="underline-offset-4 hover:underline">
+              Foundations
+            </Link>
             <Link to="/schools" className="underline-offset-4 hover:underline">
               Schools
             </Link>
@@ -32,6 +35,9 @@ export function SiteFooter() {
             </Link>
             <Link to="/corporates" className="underline-offset-4 hover:underline">
               Corporates
+            </Link>
+            <Link to="/partners" className="underline-offset-4 hover:underline">
+              Partners
             </Link>
             <Link to="/for-everyone" className="underline-offset-4 hover:underline">
               Not just for children

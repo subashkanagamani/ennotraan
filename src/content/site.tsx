@@ -60,15 +60,15 @@ export const beliefs = [
 export const steps = [
   {
     title: "Choose the habits, screen-free setup",
-    body: "Select 15 to 20 daily habits that matter to your child and your household, such as reading, sleeping on time, tidying up, or phone-free meals. Print your customised habit sheet and slide it into the tactile wooden board.",
+    body: "Select 10 to 12 daily habits that matter to your child and household, such as reading, waking on time, sleeping on time, tidying up, or phone-free meals. Print your customised habit sheet and slide it into the tactile board. Each sheet includes space for your child to write their daily success story and reflect on what made them proud.",
   },
   {
-    title: "Mark it done, child self-evaluation",
-    body: "Your child physically ticks off completed habits on top of the wooden board. No screens or apps touch their hands. This tactile routine fosters self-evaluation, personal responsibility, and daily pride.",
+    title: "The child's process: evaluate, mark, narrate",
+    body: "Your child physically ticks off completed habits on the board and writes their daily achievements in the dedicated space. Like a traditional diary, this quiet practice helps them recollect their day, express their thoughts, and build self-evaluation, responsibility, and narrative skills.",
   },
   {
     title: "Daily parent-granted points and mutual rewards",
-    body: "Once a day, open the free private app. You review the board and personally award daily points based on effort. The platform also honours parental penance: parents earn bonus points for their own consistency, active guidance, and verified phone-free time.",
+    body: "Once a day, during your pre-selected time window and chosen days, open the free private app to review the physical board and personally award Ennotraan Points based on your child's effort. Parents also earn bonus points for consistency, active guidance, and honouring their selected phone-free time.",
   },
 ];
 

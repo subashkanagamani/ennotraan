@@ -22,7 +22,7 @@ export function InstitutionPage({ content }: { content: InstitutionContent }) {
 
       <section className="mx-auto max-w-6xl px-6 py-10">
         <Reveal>
-          <h2 className="text-2xl sm:text-3xl">What gets in the way today</h2>
+          <h2 className="text-2xl sm:text-3xl">{content.firstSectionTitle}</h2>
         </Reveal>
         <StaggerGroup className="mt-8 grid gap-6 md:grid-cols-3">
           {content.challenges.map((item) => (
@@ -42,7 +42,7 @@ export function InstitutionPage({ content }: { content: InstitutionContent }) {
 
       <section className="mx-auto max-w-6xl px-6 py-10">
         <Reveal>
-          <h2 className="text-2xl sm:text-3xl">How the programme runs</h2>
+          <h2 className="text-2xl sm:text-3xl">{content.secondSectionTitle}</h2>
         </Reveal>
         <StaggerGroup className="mt-8 grid gap-6 md:grid-cols-3">
           {content.program.map((step, i) => (

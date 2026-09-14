@@ -4,6 +4,8 @@ export type InstitutionContent = {
   title: string;
   intro: string;
   image: "schools" | "colleges" | "corporates";
+  firstSectionTitle: string;
+  secondSectionTitle: string;
   challenges: { title: string; body: string }[];
   program: { title: string; body: string }[];
   outcomes: string[];
@@ -15,43 +17,45 @@ export type InstitutionContent = {
 export const schools: InstitutionContent = {
   slug: "/schools",
   eyebrow: "For schools",
-  title: "A screen-free habit system that fits inside the school day.",
+  title: "Empower your students beyond the classroom—at zero cost to your school or parents.",
   intro:
-    "Ennotraan gives every classroom a physical habit board and every family a shared rhythm, so discipline is practised at school and reinforced at home.",
+    "A student's academic performance and wellbeing are built on daily habits formed at home. Ennotraan gives educators a turnkey, scientifically backed framework that helps parents nurture disciplined, emotionally grounded children without adding any operational or financial burden to the school.",
   image: "schools",
+  firstSectionTitle: "What parents receive",
+  secondSectionTitle: "Why educators recommend Ennotraan",
   challenges: [
     {
-      title: "Attention is fragmenting",
-      body: "Students arrive already saturated by screens, and teachers spend the first minutes of every lesson recovering focus.",
+      title: "A 100% free screen-free ecosystem",
+      body: "A physical, tactile board for the child and a free private app for parent logging—with zero subscriptions, hidden fees, or child data collection.",
     },
     {
-      title: "Home and school pull apart",
-      body: "Habits taught in class rarely survive the evening, because parents have no visible way to see or support them.",
+      title: "Relief from daily conflict",
+      body: "A gentle, non-confrontational framework that reduces nagging and arguments over homework, bedtime, chores, and screen limits.",
     },
     {
-      title: "Behaviour charts feel punitive",
-      body: "Public star charts reward the same few children and quietly label the rest. Motivation drops instead of building.",
+      title: "Recognition and family value",
+      body: "Parents earn recognition for consistency and phone-free family time, while partner co-pay discounts support books, skill kits, and family lifestyle tools.",
     },
   ],
   program: [
     {
-      title: "Classroom boards, printed inserts",
-      body: "Each class receives wooden boards with habit sheets chosen by teachers, covering punctuality, reading, tidiness, kindness, and phone-free periods.",
+      title: "100% free for everyone",
+      body: "The programme is completely free for your institution and your parent community.",
     },
     {
-      title: "Students mark their own day",
-      body: "Children physically tick off what they completed. No screens, no app in their hands, no ranking against classmates.",
+      title: "Complements school discipline",
+      body: "It reinforces home routines such as daily reading, punctual sleep, homework, and phone-free study blocks.",
     },
     {
-      title: "Teachers and parents award points",
-      body: "A class teacher reviews boards in the private app once a day, while parents do the same at home, so one child sees one consistent standard.",
+      title: "No operational burden",
+      body: "Children use only the physical board, while schools need no tracking, software integration, or management from teachers and staff.",
     },
   ],
   outcomes: [
-    "Calmer starts to lessons and fewer repeated reminders",
-    "A shared vocabulary for discipline between teachers and parents",
-    "Age-appropriate habit modules for primary, middle, and high school",
-    "No student data collected, no leaderboards, ever",
+    "Better attention spans and stronger classroom engagement",
+    "Less friction around screens, homework, and bedtime at home",
+    "A practical bridge between classroom values and family routines",
+    "No student data, rankings, fees, or administrative workload",
   ],
   ctaTitle: "Bring Ennotraan to your school, free.",
   ctaBody:
@@ -70,6 +74,8 @@ export const colleges: InstitutionContent = {
   intro:
     "College is the first place nobody checks your routine. Ennotraan gives students a visible, screen-free anchor for study blocks, sleep, fitness, and focus.",
   image: "colleges",
+  firstSectionTitle: "What gets in the way today",
+  secondSectionTitle: "How the programme runs",
   challenges: [
     {
       title: "Total freedom, no structure",
@@ -117,43 +123,45 @@ export const colleges: InstitutionContent = {
 export const corporates: InstitutionContent = {
   slug: "/corporates",
   eyebrow: "For corporates",
-  title: "Deep work and wellbeing, anchored on the desk, not in another app.",
+  title: "Support your workforce where it matters most—building healthy, screen-free homes.",
   intro:
-    "Ennotraan gives teams a tactile daily board and honest screen-free sessions, so focus and wellbeing habits stay visible in the workplace.",
+    "An employee's productivity, mental focus, and job satisfaction are deeply tied to peace at home. Ennotraan is a zero-cost, high-impact family wellbeing initiative that reduces domestic friction, promotes digital detox, and honours the daily effort of working parents.",
   image: "corporates",
+  firstSectionTitle: "What working parents receive",
+  secondSectionTitle: "Why HR leaders and ESG teams choose Ennotraan",
   challenges: [
     {
-      title: "Meetings and pings own the day",
-      body: "Uninterrupted work is rare, and the tools meant to protect focus sit inside the same devices that break it.",
+      title: "A 100% free screen-free framework",
+      body: "A physical habit board for children paired with a free private parent app—with zero subscriptions or child data harvesting.",
     },
     {
-      title: "Wellness programmes fade fast",
-      body: "Launch enthusiasm drops within weeks because nothing physically reminds people of the commitment they made.",
+      title: "Reduced parental stress",
+      body: "A calm, non-confrontational system that reduces daily arguments over homework, bedtime, routines, and screen limits.",
     },
     {
-      title: "Burnout shows up too late",
-      body: "Sleep, movement, and breaks go untracked until performance and attrition make the problem visible.",
+      title: "Recognition and employee value",
+      body: "Parents receive recognition for consistency and family phone-free time, plus partner co-pay discounts on education and wellness products.",
     },
   ],
   program: [
     {
-      title: "Desk boards for every participant",
-      body: "Employees choose 15 to 20 habits across deep work, movement, learning, breaks, and phone-free hours, then print their personal insert.",
+      title: "A zero-cost corporate benefit",
+      body: "There is no cost to the company budget and no financial burden on employees.",
     },
     {
-      title: "Marked by hand, through the day",
-      body: "Ticking off a habit on a wooden board keeps intent visible at the desk instead of buried behind tabs and notifications.",
+      title: "True work-life harmony",
+      body: "The programme addresses home-front burnout by easing evening routine battles and screen friction.",
     },
     {
-      title: "Screen-free holds and capped points",
-      body: "The private app records honoured phone-free sessions and board consistency, awarding points under structured capping rules.",
+      title: "CSR and ESG alignment without overhead",
+      body: "Support community mental health and digital wellbeing with no corporate software integration, tracking, or HR administration.",
     },
   ],
   outcomes: [
-    "More protected deep work blocks each week",
-    "A wellbeing programme people can actually see on their desk",
-    "Team or department level rollouts with no employee surveillance",
-    "Points redeemable through the reimbursement module with partner brands",
+    "Healthier, calmer family routines for working parents",
+    "Less home-front stress spilling into the working day",
+    "A visible Society-First commitment to digital wellbeing",
+    "No employee surveillance, software integration, or management burden",
   ],
   ctaTitle: "Start a pilot with your team, free.",
   ctaBody:
