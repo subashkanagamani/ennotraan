@@ -65,6 +65,11 @@ function About() {
             to that purpose. If we ever must choose between what is good for society and what is
             good for a business, society comes first, always.
           </p>
+          <p className="mt-8 text-xl leading-relaxed sm:text-2xl">
+            Even if you own a Benz, the road still needs to be good — otherwise the Benz is of no
+            use. In the same way, one person alone cannot change anything; everyone in society needs
+            to be good in all terms. That is why we are building this for every home, together.
+          </p>
         </Reveal>
       </section>
 
