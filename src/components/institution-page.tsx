@@ -3,14 +3,14 @@ import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import type { InstitutionContent } from "@/content/institutions";
-import schoolImage from "@/assets/schools-hero-life.jpg";
-import collegeImage from "@/assets/colleges-hero-life.jpg";
-import corporateImage from "@/assets/corporates-hero-professionals.jpg";
+import schoolImage from "@/assets/schools-hero-south-indian.jpg";
+import collegeImage from "@/assets/colleges-hero-south-indian.jpg";
+import corporateImage from "@/assets/corporates-hero-south-indian.jpg";
 
 const images = {
-  schools: { src: schoolImage, width: 1376, height: 1152, alt: "Schoolchildren reading, writing, planting, and helping each other outdoors as daily habits for a better life" },
-  colleges: { src: collegeImage, width: 1376, height: 1152, alt: "College students reading, journaling, exercising, and talking together on campus as healthy daily habits" },
-  corporates: { src: corporateImage, width: 1376, height: 1152, alt: "Professionals in a calm workplace reading, stretching, sharing healthy food, and taking mindful breaks as daily wellbeing habits" },
+  schools: { src: schoolImage, width: 1376, height: 1152, alt: "South Indian schoolchildren reading together and caring for a plant in their school courtyard" },
+  colleges: { src: collegeImage, width: 1376, height: 1152, alt: "South Indian college students studying and discussing ideas together on campus" },
+  corporates: { src: corporateImage, width: 1376, height: 1152, alt: "South Indian professionals taking a healthy break together in a modern workplace" },
 };
 
 export function InstitutionPage({ content }: { content: InstitutionContent }) {
