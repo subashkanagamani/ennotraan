@@ -3,14 +3,14 @@ import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import type { InstitutionContent } from "@/content/institutions";
-import schoolImage from "@/assets/schools-hero-path.jpg";
-import collegeImage from "@/assets/colleges-hero-path.jpg";
-import corporateImage from "@/assets/corporates-hero-path.jpg";
+import schoolImage from "@/assets/schools-hero-life.jpg";
+import collegeImage from "@/assets/colleges-hero-life.jpg";
+import corporateImage from "@/assets/corporates-hero-life.jpg";
 
 const images = {
-  schools: { src: schoolImage, width: 1376, height: 1152, alt: "Children walking confidently through a sunlit school gate, the right path for education" },
-  colleges: { src: collegeImage, width: 1376, height: 1152, alt: "College students walking together up a campus pathway toward open doors and a bright future" },
-  corporates: { src: corporateImage, width: 1376, height: 1152, alt: "Professionals walking forward across a modern bridge toward a calm horizon at sunrise" },
+  schools: { src: schoolImage, width: 1376, height: 1152, alt: "Schoolchildren reading, writing, planting, and helping each other outdoors as daily habits for a better life" },
+  colleges: { src: collegeImage, width: 1376, height: 1152, alt: "College students reading, journaling, exercising, and talking together on campus as healthy daily habits" },
+  corporates: { src: corporateImage, width: 1376, height: 1152, alt: "A working parent reading while a child draws, with healthy food and a yoga mat nearby, showing balanced family routines" },
 };
 
 export function InstitutionPage({ content }: { content: InstitutionContent }) {
