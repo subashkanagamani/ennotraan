@@ -5,12 +5,12 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import type { InstitutionContent } from "@/content/institutions";
 import schoolImage from "@/assets/schools-hero-life.jpg";
 import collegeImage from "@/assets/colleges-hero-life.jpg";
-import corporateImage from "@/assets/corporates-hero-life.jpg";
+import corporateImage from "@/assets/corporates-hero-professionals.jpg";
 
 const images = {
   schools: { src: schoolImage, width: 1376, height: 1152, alt: "Schoolchildren reading, writing, planting, and helping each other outdoors as daily habits for a better life" },
   colleges: { src: collegeImage, width: 1376, height: 1152, alt: "College students reading, journaling, exercising, and talking together on campus as healthy daily habits" },
-  corporates: { src: corporateImage, width: 1376, height: 1152, alt: "A working parent reading while a child draws, with healthy food and a yoga mat nearby, showing balanced family routines" },
+  corporates: { src: corporateImage, width: 1376, height: 1152, alt: "Professionals in a calm workplace reading, stretching, sharing healthy food, and taking mindful breaks as daily wellbeing habits" },
 };
 
 export function InstitutionPage({ content }: { content: InstitutionContent }) {
