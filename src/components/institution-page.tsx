@@ -3,14 +3,14 @@ import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import type { InstitutionContent } from "@/content/institutions";
-import schoolImage from "@/assets/schools-hero.jpg.asset.json";
-import collegeImage from "@/assets/colleges-hero.jpg.asset.json";
-import corporateImage from "@/assets/corporates-hero.jpg.asset.json";
+import schoolImage from "@/assets/schools-hero-path.jpg";
+import collegeImage from "@/assets/colleges-hero-path.jpg";
+import corporateImage from "@/assets/corporates-hero-path.jpg";
 
 const images = {
-  schools: { src: schoolImage.url, width: 1370, height: 1148, alt: "Schoolchildren using the Ennotraan daily routine evaluation board in class" },
-  colleges: { src: collegeImage.url, width: 1370, height: 1148, alt: "College students using the Ennotraan daily routine evaluation board on campus" },
-  corporates: { src: corporateImage.url, width: 1371, height: 1148, alt: "Professionals using the Ennotraan daily routine evaluation board in the workplace" },
+  schools: { src: schoolImage, width: 1376, height: 1152, alt: "Children walking confidently through a sunlit school gate, the right path for education" },
+  colleges: { src: collegeImage, width: 1376, height: 1152, alt: "College students walking together up a campus pathway toward open doors and a bright future" },
+  corporates: { src: corporateImage, width: 1376, height: 1152, alt: "Professionals walking forward across a modern bridge toward a calm horizon at sunrise" },
 };
 
 export function InstitutionPage({ content }: { content: InstitutionContent }) {
