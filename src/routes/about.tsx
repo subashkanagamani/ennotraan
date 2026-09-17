@@ -61,14 +61,15 @@ function About() {
         />
         <Reveal className="relative mx-auto max-w-3xl text-center">
           <p className="text-xl leading-relaxed sm:text-2xl">
-            This began as a heartfelt mission to help families cope with screens, and it stays true
-            to that purpose. If we ever must choose between what is good for society and what is
-            good for a business, society comes first, always.
+            This began as a heartfelt mission to help people build good daily habits and cope with
+            screens, and it stays true to that purpose. If we ever must choose between what is good
+            for society and what is good for a business, society comes first, always.
           </p>
           <p className="mt-8 text-xl leading-relaxed sm:text-2xl">
             Even if you own a Benz, the road still needs to be good — otherwise the Benz is of no
             use. In the same way, one person alone cannot change anything; everyone in society needs
-            to be good in all terms. That is why we are building this for every home, together.
+            to be good in all terms. That is why we are building this for everyone — school students,
+            college students, parents, working professionals, and all humans — together.
           </p>
         </Reveal>
       </section>
