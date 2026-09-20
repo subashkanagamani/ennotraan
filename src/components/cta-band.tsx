@@ -27,13 +27,22 @@ export function CtaBand({
             <h2 className="text-3xl sm:text-4xl">{title}</h2>
             <p className="mt-5 text-lg leading-relaxed opacity-90">{body}</p>
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} className="mt-8 inline-block">
-              <Link
-                to={organisationAudience ? "/organisation-enquiry" : "/join"}
-                search={organisationAudience ? { for: organisationAudience } : undefined}
-                className="inline-block rounded-full bg-background px-8 py-4 font-semibold text-primary shadow-soft"
-              >
-                {organisationAudience ? "Enquire about a free pilot" : "Join free, no cost ever"}
-              </Link>
+              {organisationAudience ? (
+                <Link
+                  to="/organisation-enquiry"
+                  search={{ for: organisationAudience }}
+                  className="inline-block rounded-full bg-background px-8 py-4 font-semibold text-primary shadow-soft"
+                >
+                  Enquire about a free pilot
+                </Link>
+              ) : (
+                <Link
+                  to="/join"
+                  className="inline-block rounded-full bg-background px-8 py-4 font-semibold text-primary shadow-soft"
+                >
+                  Join free, no cost ever
+                </Link>
+              )}
             </motion.div>
           </div>
         </motion.div>

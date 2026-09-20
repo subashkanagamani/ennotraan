@@ -24,6 +24,12 @@ const pageCopy: Record<EnquiryAudience, { eyebrow: string; title: string; intro:
   },
 };
 
+const audienceLabels: Record<EnquiryAudience, string> = {
+  school: "School",
+  college: "College",
+  company: "Company",
+};
+
 export const Route = createFileRoute("/organisation-enquiry")({
   validateSearch: searchSchema,
   head: () => ({
@@ -58,7 +64,7 @@ function OrganisationEnquiryPage() {
                 search={{ for: type }}
                 className={`rounded-full border px-4 py-2 text-sm transition-colors ${audience === type ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background text-muted-foreground hover:bg-secondary hover:text-foreground"}`}
               >
-                {type === "company" ? "Company" : type[0].toUpperCase() + type.slice(1)}
+                {audienceLabels[type]}
               </Link>
             ))}
           </div>
