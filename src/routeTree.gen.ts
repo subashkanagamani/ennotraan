@@ -17,6 +17,7 @@ import { Route as ForEveryoneRouteImport } from './routes/for-everyone'
 import { Route as FoundationsRouteImport } from './routes/foundations'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as JoinRouteImport } from './routes/join'
+import { Route as OrganisationEnquiryRouteImport } from './routes/organisation-enquiry'
 import { Route as OurPromiseRouteImport } from './routes/our-promise'
 import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as SchoolsRouteImport } from './routes/schools'
@@ -61,6 +62,11 @@ const JoinRoute = JoinRouteImport.update({
   path: '/join',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OrganisationEnquiryRoute = OrganisationEnquiryRouteImport.update({
+  id: '/organisation-enquiry',
+  path: '/organisation-enquiry',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OurPromiseRoute = OurPromiseRouteImport.update({
   id: '/our-promise',
   path: '/our-promise',
@@ -86,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/foundations': typeof FoundationsRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
+  '/organisation-enquiry': typeof OrganisationEnquiryRoute
   '/our-promise': typeof OurPromiseRoute
   '/partners': typeof PartnersRoute
   '/schools': typeof SchoolsRoute
@@ -99,6 +106,7 @@ export interface FileRoutesByTo {
   '/foundations': typeof FoundationsRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
+  '/organisation-enquiry': typeof OrganisationEnquiryRoute
   '/our-promise': typeof OurPromiseRoute
   '/partners': typeof PartnersRoute
   '/schools': typeof SchoolsRoute
@@ -113,6 +121,7 @@ export interface FileRoutesById {
   '/foundations': typeof FoundationsRoute
   '/how-it-works': typeof HowItWorksRoute
   '/join': typeof JoinRoute
+  '/organisation-enquiry': typeof OrganisationEnquiryRoute
   '/our-promise': typeof OurPromiseRoute
   '/partners': typeof PartnersRoute
   '/schools': typeof SchoolsRoute
@@ -128,6 +137,7 @@ export interface FileRouteTypes {
     | '/foundations'
     | '/how-it-works'
     | '/join'
+    | '/organisation-enquiry'
     | '/our-promise'
     | '/partners'
     | '/schools'
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/foundations'
     | '/how-it-works'
     | '/join'
+    | '/organisation-enquiry'
     | '/our-promise'
     | '/partners'
     | '/schools'
@@ -154,6 +165,7 @@ export interface FileRouteTypes {
     | '/foundations'
     | '/how-it-works'
     | '/join'
+    | '/organisation-enquiry'
     | '/our-promise'
     | '/partners'
     | '/schools'
@@ -168,6 +180,7 @@ export interface RootRouteChildren {
   FoundationsRoute: typeof FoundationsRoute
   HowItWorksRoute: typeof HowItWorksRoute
   JoinRoute: typeof JoinRoute
+  OrganisationEnquiryRoute: typeof OrganisationEnquiryRoute
   OurPromiseRoute: typeof OurPromiseRoute
   PartnersRoute: typeof PartnersRoute
   SchoolsRoute: typeof SchoolsRoute
@@ -231,6 +244,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JoinRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/organisation-enquiry': {
+      id: '/organisation-enquiry'
+      path: '/organisation-enquiry'
+      fullPath: '/organisation-enquiry'
+      preLoaderRoute: typeof OrganisationEnquiryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/our-promise': {
       id: '/our-promise'
       path: '/our-promise'
@@ -264,6 +284,7 @@ const rootRouteChildren: RootRouteChildren = {
   FoundationsRoute: FoundationsRoute,
   HowItWorksRoute: HowItWorksRoute,
   JoinRoute: JoinRoute,
+  OrganisationEnquiryRoute: OrganisationEnquiryRoute,
   OurPromiseRoute: OurPromiseRoute,
   PartnersRoute: PartnersRoute,
   SchoolsRoute: SchoolsRoute,
