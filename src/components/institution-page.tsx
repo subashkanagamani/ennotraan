@@ -15,6 +15,7 @@ const images = {
 
 export function InstitutionPage({ content }: { content: InstitutionContent }) {
   const image = images[content.image];
+  const organisationAudience = content.image === "corporates" ? "company" : content.image === "colleges" ? "college" : "school";
   return (
     <>
       <PageHero eyebrow={content.eyebrow} title={content.title} intro={content.intro} image={image} />
@@ -75,7 +76,7 @@ export function InstitutionPage({ content }: { content: InstitutionContent }) {
         </Reveal>
       </section>
 
-      <CtaBand title={content.ctaTitle} body={content.ctaBody} />
+      <CtaBand title={content.ctaTitle} body={content.ctaBody} organisationAudience={organisationAudience} />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -173,7 +173,7 @@ export function OrganisationEnquiryForm({ audience }: { audience: EnquiryAudienc
   );
 }
 
-function FormField({ label, name, error, children }: { label: string; name: string; error: React.ReactNode; children: React.ReactNode }) {
+function FormField({ label, name, error, children }: { label: string; name: string; error: ReactNode; children: ReactNode }) {
   return (
     <div className="grid content-start gap-2">
       <Label htmlFor={name} className="text-muted-foreground">{label}</Label>

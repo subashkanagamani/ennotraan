@@ -5,9 +5,11 @@ import { Reveal } from "./motion";
 export function CtaBand({
   title = "Join today. It costs nothing, now or later.",
   body = "Leave your details and our team will personally reach out to welcome you in.",
+  organisationAudience,
 }: {
   title?: string;
   body?: string;
+  organisationAudience?: "school" | "college" | "company";
 }) {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
@@ -26,10 +28,11 @@ export function CtaBand({
             <p className="mt-5 text-lg leading-relaxed opacity-90">{body}</p>
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} className="mt-8 inline-block">
               <Link
-                to="/join"
+                to={organisationAudience ? "/organisation-enquiry" : "/join"}
+                search={organisationAudience ? { for: organisationAudience } : undefined}
                 className="inline-block rounded-full bg-background px-8 py-4 font-semibold text-primary shadow-soft"
               >
-                Join free, no cost ever
+                {organisationAudience ? "Enquire about a free pilot" : "Join free, no cost ever"}
               </Link>
             </motion.div>
           </div>
