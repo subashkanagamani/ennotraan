@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring } from "motion/react";
 import { useState } from "react";
-import logo from "@/assets/ennotraan-logo.png.asset.json";
+import logo from "@/assets/ennotraan-logo.png";
 
 const nav = [
   { to: "/how-it-works", label: "How it works" },
