@@ -35,7 +35,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <motion.img
-            src={logo.url}
+            src={logo}
             alt="Ennotraan"
             className="h-11 w-auto sm:h-12"
             whileHover={{ scale: 1.05, rotate: -1.5 }}

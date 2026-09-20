@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import lamp from "@/assets/lamp.jpg";
-import homeHeroBoard from "@/assets/home-hero-south-indian-children.jpg.asset.json";
+import homeHeroBoard from "@/assets/home-hero-south-indian-children.jpg";
 import { CtaBand } from "@/components/cta-band";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import { problemsAdults, problemsParents } from "@/content/site";
@@ -118,7 +118,7 @@ function Home() {
           <div className="absolute -bottom-7 -right-5 h-28 w-28 rotate-12 rounded-[30%] bg-gold/75 drift-slow" />
           <div className="absolute -right-7 top-16 h-14 w-14 rotate-45 rounded-lg bg-mint orbit-slow" />
           <motion.img
-            src={homeHeroBoard.url}
+            src={homeHeroBoard}
             alt="A mother and daughter using their Ennotraan daily routine evaluation board together"
             width={1024}
             height={1024}
