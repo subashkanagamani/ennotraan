@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring } from "motion/react";
 import { useState } from "react";
-import logo from "@/assets/ennotraan-logo.png";
 
 const nav = [
   { to: "/how-it-works", label: "How it works" },
@@ -35,7 +34,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <motion.img
-            src={logo}
+            src="/images/ennotraan-logo-static.png"
             alt="Ennotraan"
             className="h-11 w-auto sm:h-12"
             whileHover={{ scale: 1.05, rotate: -1.5 }}
