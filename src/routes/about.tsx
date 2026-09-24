@@ -48,8 +48,8 @@ function About() {
     <>
       <PageHero
         eyebrow="Why we built this"
-        title="Offered completely free, powered by purpose, not profit off children."
-        intro="Ennotraan is offered completely free to families because we believe every household deserves a simple, honest tool to build good habits and reclaim digital balance."
+        title="Rooted in Thirukkural 70: Raising Souls of Character, Not Just Citizens of Screen Time"
+        intro="Because Childhood Belongs in Hands, Not on Screens"
         image={{
           src: "/images/why-we-built-hero.jpg",
           alt: "People planting a young tree together",
