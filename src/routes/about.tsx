@@ -100,16 +100,12 @@ function About() {
         <Reveal className="mt-14 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           <p>
             Ennotraan is a social initiative by PPLMeliorate Services Private Limited, a recognised
-            startup in Tamil Nadu. To talk to us directly, reach Saravanan Ganesan on{" "}
-            <a href="tel:+917092023733" className="text-primary underline-offset-4 hover:underline">
-              +91 70920 23733
-            </a>{" "}
-            or{" "}
+            startup in Tamil Nadu. To talk to us directly, email{" "}
             <a
-              href="mailto:info@pplmeliorate.com"
+              href="mailto:info@ennotraan.com"
               className="text-primary underline-offset-4 hover:underline"
             >
-              info@pplmeliorate.com
+              info@ennotraan.com
             </a>
             .
           </p>

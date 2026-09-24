@@ -58,8 +58,8 @@ export function SiteFooter() {
         <div className="text-sm leading-relaxed opacity-75 md:text-right">
           <p>
             Contact:{" "}
-            <a href="mailto:info@pplmeliorate.com" className="underline-offset-4 hover:underline">
-              info@pplmeliorate.com
+            <a href="mailto:info@ennotraan.com" className="underline-offset-4 hover:underline">
+              info@ennotraan.com
             </a>
           </p>
           <p className="mt-3">
