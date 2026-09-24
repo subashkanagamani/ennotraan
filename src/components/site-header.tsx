@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { useState } from "react";
 
 const nav = [
+  { to: "/about", label: "Why we built it" },
   { to: "/how-it-works", label: "How it works" },
   { to: "/foundations", label: "Foundations" },
   { to: "/schools", label: "Schools" },
@@ -11,7 +12,6 @@ const nav = [
   { to: "/partners", label: "Partners" },
   { to: "/for-everyone", label: "Not just for children" },
   { to: "/our-promise", label: "Our promise" },
-  { to: "/about", label: "Why we built it" },
 ] as const;
 
 

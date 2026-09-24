@@ -21,6 +21,9 @@ export function SiteFooter() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm opacity-80">
+            <Link to="/about" className="underline-offset-4 hover:underline">
+              Why we built it
+            </Link>
             <Link to="/how-it-works" className="underline-offset-4 hover:underline">
               How it works
             </Link>
@@ -46,9 +49,6 @@ export function SiteFooter() {
 
             <Link to="/our-promise" className="underline-offset-4 hover:underline">
               Our promise
-            </Link>
-            <Link to="/about" className="underline-offset-4 hover:underline">
-              Why we built it
             </Link>
             <Link to="/join" className="underline-offset-4 hover:underline">
               Join free
