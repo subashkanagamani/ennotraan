@@ -70,10 +70,11 @@ function About() {
             for society and what is good for a business, society comes first, always.
           </p>
           <p className="mt-8 text-xl leading-relaxed sm:text-2xl">
-            Even if you own a Benz, the road still needs to be good — otherwise the Benz is of no
-            use. In the same way, one person alone cannot change anything; everyone in society needs
-            to be good in all terms. That is why we are building this for everyone — school students,
-            college students, parents, working professionals, and all humans — together.
+            Even the finest vehicle is rendered useless if the road beneath it is broken. In the same
+            way, personal success means little if the society around us lacks character and
+            discipline. True transformation cannot happen in isolation—it requires everyone to rise
+            together. That is why Ennotraan is built for all: students, parents, professionals, and
+            every individual committed to a better collective future.
           </p>
         </Reveal>
       </section>
