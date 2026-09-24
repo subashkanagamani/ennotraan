@@ -57,11 +57,7 @@ export function SiteFooter() {
         </div>
         <div className="text-sm leading-relaxed opacity-75 md:text-right">
           <p>
-            Contact: Saravanan Ganesan,{" "}
-            <a href="tel:+917092023733" className="underline-offset-4 hover:underline">
-              +91 70920 23733
-            </a>
-            ,{" "}
+            Contact:{" "}
             <a href="mailto:info@pplmeliorate.com" className="underline-offset-4 hover:underline">
               info@pplmeliorate.com
             </a>
