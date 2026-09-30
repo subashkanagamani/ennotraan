@@ -109,6 +109,7 @@ export const colleges: InstitutionContent = {
     "Focus time measured honestly, not by app screenshots",
     "Department, hostel, or club level rollouts",
     "No rankings between students, only progress against their own past week",
+    "A non-clinical habit support tool for focus and career readiness, not a mental health treatment",
   ],
   ctaTitle: "Roll it out on your campus, free.",
   ctaBody:
@@ -161,7 +162,7 @@ export const corporates: InstitutionContent = {
     "Healthier, calmer family routines for working parents",
     "Less home-front stress spilling into the working day",
     "A visible Society-First commitment to digital wellbeing",
-    "No employee surveillance, software integration, or management burden",
+    "No employee surveillance or software integration; any group-level reporting requires agreed privacy safeguards",
   ],
   ctaTitle: "Start a pilot with your team, free.",
   ctaBody:
