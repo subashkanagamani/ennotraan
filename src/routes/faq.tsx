@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import faqHero from "@/assets/family-habits.jpg";
 
 const groups = [
   { id: "philosophy", title: "Purpose & everyday practice", questions: [
@@ -51,7 +52,7 @@ export const Route = createFileRoute("/faq")({
 
 function FAQ() {
   return <>
-    <PageHero eyebrow="Questions & answers" title="A clearer picture of how it works." intro="The answers below distinguish today's website from product features and partnerships being planned. For a personal answer, write to info@ennotraan.com." />
+    <PageHero eyebrow="Questions & answers" title="A clearer picture of how it works." intro="The answers below distinguish today's website from product features and partnerships being planned. For a personal answer, write to info@ennotraan.com." image={{ src: faqHero, alt: "A family spending time together around a physical habit board", width: 1200, height: 900 }} />
     <div className="mx-auto grid max-w-6xl gap-12 px-6 pb-20 lg:grid-cols-[220px_1fr]">
       <nav aria-label="FAQ topics" className="flex flex-wrap items-start gap-2 lg:sticky lg:top-28 lg:flex-col lg:self-start">{groups.map(group => <a href={`#${group.id}`} key={group.id} className="rounded-md border border-border bg-background px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">{group.title}</a>)}</nav>
       <div className="space-y-14">{groups.map(group => <section id={group.id} key={group.id} className="scroll-mt-32"><h2 className="mb-5 text-2xl sm:text-3xl">{group.title}</h2><Accordion type="multiple" className="border-t border-border">{group.questions.map(([question, answer]) => <AccordionItem value={question} key={question}><AccordionTrigger className="gap-5 py-5 text-left text-base font-semibold hover:no-underline">{question}</AccordionTrigger><AccordionContent className="max-w-3xl pb-6 text-base leading-relaxed text-muted-foreground">{answer}</AccordionContent></AccordionItem>)}</Accordion></section>)}<p className="border-t border-border pt-8 text-muted-foreground">Have another question? <a className="font-semibold text-primary underline-offset-4 hover:underline" href="mailto:info@ennotraan.com?subject=Ennotraan%20question">Email us</a> or explore the <Link to="/how-it-works" className="font-semibold text-primary underline-offset-4 hover:underline">daily practice</Link>.</p></div>
