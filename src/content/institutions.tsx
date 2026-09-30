@@ -59,11 +59,11 @@ export const schools: InstitutionContent = {
   ],
   ctaTitle: "Bring Ennotraan (என்நோற்றான்) to your school, free.",
   ctaBody:
-    "Tell us about your school and our team will walk your leadership through the setup, the boards, and the teacher app.",
+    "Tell us about your school and our team will walk your leadership through the setup, the boards, and the parent-led experience.",
   meta: {
-    title: "Ennotraan (என்நோற்றான்) for Schools — screen-free habit building in class",
+    title: "Ennotraan (என்நோற்றான்) for Schools — screen-free habits at home",
     description:
-      "A free physical habit board and private teacher app that helps schools build punctuality, reading and focus, with parents reinforcing the same habits at home.",
+      "A free physical habit board and parent-only app that helps families build reading, focus and daily routines without adding school IT workload.",
   },
 };
 
