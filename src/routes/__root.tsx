@@ -7,6 +7,7 @@ import {
   useRouterState,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, type ReactNode } from "react";
